@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "201"
             endingLineNumber = "201"
-            landmarkName = "checkEnableLocation(_:)"
-            landmarkType = "5">
+            landmarkName = "removeDelegate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "frame/AppDelegate.swift"
-            timestampString = "485924340.607943"
+            timestampString = "493800072.753509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "application(_:openURL:sourceApplication:annotation:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "frame/AppDelegate.swift"
-            timestampString = "485924341.911222"
+            timestampString = "493800072.753509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "application(_:openURL:options:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -105,14 +105,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UIExtensions/HPTextView.swift"
-            timestampString = "490517678.643015"
+            filePath = "Animations/HorizontalThreeGradientIndicator.swift"
+            timestampString = "493792245.25845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "customInit(_:)"
-            landmarkType = "5">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "setupAnimationLayer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Activity/HPGravityModalTransition.swift"
+            timestampString = "502350361.888141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "dynamicAnimatorWillResume(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

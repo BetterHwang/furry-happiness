@@ -15,8 +15,8 @@ extension Int {
         return NSString(format: "%d", self) as String
     }
     
-    func toString(format: String) -> String {
-        return NSString(format: format, self) as String
+    func toString(_ format: String) -> String {
+        return NSString(format: format as NSString, self) as String
     }
 }
 
@@ -26,7 +26,7 @@ extension UInt {
         return NSString(format: "%lld", self) as String
     }
     
-    func toString(format: String) -> String {
-        return NSString(format: format, self) as String
+    func toString(_ format: String) -> String {
+        return NSString(format: format as NSString, self) as String
     }
 }

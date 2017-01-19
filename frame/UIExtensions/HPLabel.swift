@@ -9,19 +9,19 @@
 import UIKit
 
 enum TextAlignmentVertical {
-    case Top
-    case Middle
-    case Bottom
+    case top
+    case middle
+    case bottom
 }
 
 class HPLabel: UILabel {
 
-    var textAlignmentVertical: TextAlignmentVertical = .Middle {
+    var textAlignmentVertical: TextAlignmentVertical = .middle {
         didSet {
             self.setNeedsDisplay()
         }
     }
-    var textInset: UIEdgeInsets = UIEdgeInsetsZero {
+    var textInset: UIEdgeInsets = UIEdgeInsets.zero {
         didSet {
             self.setNeedsDisplay()
         }
@@ -43,19 +43,19 @@ class HPLabel: UILabel {
         
     }
     
-    override func textRectForBounds(bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+    override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
         //获取实际显示矩形
         let contentRect = UIEdgeInsetsInsetRect(bounds, textInset)
         //获取文字显示矩形
-        var textRect = super.textRectForBounds(contentRect, limitedToNumberOfLines: numberOfLines)
+        var textRect = super.textRect(forBounds: contentRect, limitedToNumberOfLines: numberOfLines)
         //根据类型修改显示的位置
         switch self.textAlignmentVertical {
-        case .Top:
+        case .top:
             textRect.origin.y = contentRect.origin.y
             break
-        case .Middle:
+        case .middle:
             break
-        case .Bottom:
+        case .bottom:
             textRect.origin.y = contentRect.origin.y + contentRect.size.height - textRect.size.height
             break
         }
@@ -63,8 +63,8 @@ class HPLabel: UILabel {
         return textRect
     }
     
-    override func drawTextInRect(rect: CGRect) {
-        let actualRect = self.textRectForBounds(rect, limitedToNumberOfLines: self.numberOfLines)
-        super.drawTextInRect(actualRect)
+    override func drawText(in rect: CGRect) {
+        let actualRect = self.textRect(forBounds: rect, limitedToNumberOfLines: self.numberOfLines)
+        super.drawText(in: actualRect)
     }
 }

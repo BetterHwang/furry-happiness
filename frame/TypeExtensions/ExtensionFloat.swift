@@ -15,8 +15,8 @@ extension Float {
         return NSString(format: "%f", self) as String
     }
     
-    func toString(format: String) -> String {
-        return NSString(format: format, self) as String
+    func toString(_ format: String) -> String {
+        return NSString(format: format as NSString, self) as String
     }
 }
 

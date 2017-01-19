@@ -32,14 +32,14 @@ extension String {
         return (self as NSString).length
     }
     
-    func firstIndexOfCharacter(char: Character) -> Int? {
-        if let index = self.characters.indexOf(char) {
-            return self.startIndex.distanceTo(index)
+    func firstIndexOfCharacter(_ char: Character) -> Int? {
+        if let index = self.characters.index(of: char) {
+            return self.characters.distance(from: self.startIndex, to: index)
         }
         return nil
     }
     
-    func isContainCharacter(char: Character) -> Bool {
+    func isContainCharacter(_ char: Character) -> Bool {
         
         if let index = self.firstIndexOfCharacter(char) {
             return true
@@ -48,11 +48,11 @@ extension String {
         }
     }
     
-    func isHasSameStr(str:String) -> Bool {
+    func isHasSameStr(_ str:String) -> Bool {
         
-        var flag =  (str as NSString).rangeOfString(self).length > 0
+        var flag =  (str as NSString).range(of: self).length > 0
         if !flag {
-            flag = (self as NSString).rangeOfString(str).length > 0
+            flag = (self as NSString).range(of: str).length > 0
         }
         return flag
     }

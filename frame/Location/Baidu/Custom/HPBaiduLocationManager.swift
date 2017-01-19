@@ -8,29 +8,29 @@
 
 import UIKit
 @objc protocol HPBaiduLocationManagerDelegate: NSObjectProtocol {
-    optional func locationManagerWillStartLocation(style: LocationStyle)
-    optional func locationManagerDidStopLocation()
-    optional func locationManagerDidUpdateLocationGPS(location: CLLocation?, placeMark: CLPlacemark?)
-    optional func locationManagerUpdateLocationError(error: NSError?)
+    @objc optional func locationManagerWillStartLocation(_ style: LocationStyle)
+    @objc optional func locationManagerDidStopLocation()
+    @objc optional func locationManagerDidUpdateLocationGPS(_ location: CLLocation?, placeMark: CLPlacemark?)
+    @objc optional func locationManagerUpdateLocationError(_ error: NSError?)
 }
 
 private let defaultLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
 
 class HPBaiduLocationManager: NSObject, BMKLocationServiceDelegate {
     
-    private let locService = BMKLocationService()
+    fileprivate let locService = BMKLocationService()
     
-    private static let _inst = HPBaiduLocationManager()
+    fileprivate static let _inst = HPBaiduLocationManager()
     class var sharedInstance: HPBaiduLocationManager {
         return _inst
     }
     
-    private var _callbackCloseLocation: ((Void) -> Void)?
-    private var _currentLocation: CLLocationCoordinate2D = defaultLocation
+    fileprivate var _callbackCloseLocation: ((Void) -> Void)?
+    fileprivate var _currentLocation: CLLocationCoordinate2D = defaultLocation
     
     var delegate: HPBaiduLocationManagerDelegate?
     
-    private override init() {
+    fileprivate override init() {
         super.init()
         
         //距离移动更新 最小值
@@ -41,20 +41,20 @@ class HPBaiduLocationManager: NSObject, BMKLocationServiceDelegate {
         locService.headingFilter = 1
         locService.delegate = self
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HPBaiduLocationManager.appWillResignActive(_:)), name: UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HPBaiduLocationManager.appWillTerminate(_:)), name: UIApplicationWillTerminateNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HPBaiduLocationManager.appWillResignActive(_:)), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HPBaiduLocationManager.appWillTerminate(_:)), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
     }
     
-    func appWillResignActive(notice: NSNotification) {
+    func appWillResignActive(_ notice: Notification) {
         
     }
     
-    func appWillTerminate(notice: NSNotification) {
+    func appWillTerminate(_ notice: Notification) {
         
     }
     
     //启动始终或者使用时开启 由plist中NSLocationAlwaysUsageDescription或NSLocationWhenInUseUsageDescription 决定
-    func startLocation(style: LocationStyle, callbackCloseLocation: ((Void) -> Void)? = nil) {
+    func startLocation(_ style: LocationStyle, callbackCloseLocation: ((Void) -> Void)? = nil) {
         _callbackCloseLocation = callbackCloseLocation
         
         if !enableLocation() {
@@ -63,7 +63,7 @@ class HPBaiduLocationManager: NSObject, BMKLocationServiceDelegate {
         }
         
         switch style {
-        case .Always:
+        case .always:
             //永久使用
             //background保持定位
             locService.allowsBackgroundLocationUpdates = true
@@ -72,7 +72,7 @@ class HPBaiduLocationManager: NSObject, BMKLocationServiceDelegate {
             //动态暂停关闭
             locService.pausesLocationUpdatesAutomatically = false
             break
-        case .InUsage:
+        case .inUsage:
             //使用时开启
             //选用默认参数可不做处理
             break
@@ -86,7 +86,7 @@ class HPBaiduLocationManager: NSObject, BMKLocationServiceDelegate {
     }
     
     func enableLocation() -> Bool {
-        return CLLocationManager.authorizationStatus() != .Denied
+        return CLLocationManager.authorizationStatus() != .denied
     }
     
     //delegate
@@ -98,15 +98,15 @@ class HPBaiduLocationManager: NSObject, BMKLocationServiceDelegate {
         
     }
     
-    @objc internal func didUpdateUserHeading(userLocation: BMKUserLocation!) {
+    @objc internal func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         
     }
     
-    @objc internal func didUpdateBMKUserLocation(userLocation: BMKUserLocation!) {
+    @objc internal func didUpdate(_ userLocation: BMKUserLocation!) {
         NSLog("\(userLocation.location)")
     }
     
-    @objc internal func didFailToLocateUserWithError(error: NSError!) {
+    @objc internal func didFailToLocateUserWithError(_ error: NSError!) {
         if !enableLocation() {
             _callbackCloseLocation?()
         }

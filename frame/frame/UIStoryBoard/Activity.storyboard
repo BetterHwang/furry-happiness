@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Activity View Controller-->
+        <scene sceneID="c7N-4M-5nT">
+            <objects>
+                <viewController storyboardIdentifier="ActivityViewController" id="5ag-o2-mj9" customClass="ActivityViewController" customModule="frame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nRE-tP-Gy7"/>
+                        <viewControllerLayoutGuide type="bottom" id="I7d-aJ-mIo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HtB-pI-NMh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSG-VD-Di1">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.71764705880000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-k1-M1u">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="关闭"/>
+                                <connections>
+                                    <action selector="onBtnClickClose:" destination="5ag-o2-mj9" eventType="touchUpInside" id="p65-cn-GRs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nSG-VD-Di1" firstAttribute="width" secondItem="HtB-pI-NMh" secondAttribute="width" multiplier="0.7" id="Cpi-vj-mWQ"/>
+                            <constraint firstItem="nSG-VD-Di1" firstAttribute="centerY" secondItem="HtB-pI-NMh" secondAttribute="centerY" id="FBZ-nh-aeS"/>
+                            <constraint firstItem="I7d-aJ-mIo" firstAttribute="top" secondItem="3ey-k1-M1u" secondAttribute="bottom" id="FJT-Er-oK9"/>
+                            <constraint firstItem="nSG-VD-Di1" firstAttribute="centerX" secondItem="HtB-pI-NMh" secondAttribute="centerX" id="I7Q-Yt-9Iv"/>
+                            <constraint firstAttribute="trailing" secondItem="3ey-k1-M1u" secondAttribute="trailing" id="VD6-WU-86d"/>
+                            <constraint firstItem="3ey-k1-M1u" firstAttribute="top" secondItem="nSG-VD-Di1" secondAttribute="bottom" id="XES-jz-XKB"/>
+                            <constraint firstItem="3ey-k1-M1u" firstAttribute="leading" secondItem="HtB-pI-NMh" secondAttribute="leading" id="wTZ-ju-bn5"/>
+                            <constraint firstItem="nSG-VD-Di1" firstAttribute="height" secondItem="HtB-pI-NMh" secondAttribute="height" multiplier="0.7" id="yAK-ND-2VV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nSG-VD-Di1"/>
+                                <exclude reference="3ey-k1-M1u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="FJT-Er-oK9"/>
+                                <exclude reference="VD6-WU-86d"/>
+                                <exclude reference="XES-jz-XKB"/>
+                                <exclude reference="wTZ-ju-bn5"/>
+                                <exclude reference="Cpi-vj-mWQ"/>
+                                <exclude reference="FBZ-nh-aeS"/>
+                                <exclude reference="I7Q-Yt-9Iv"/>
+                                <exclude reference="yAK-ND-2VV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nSG-VD-Di1"/>
+                                <include reference="3ey-k1-M1u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="FJT-Er-oK9"/>
+                                <include reference="VD6-WU-86d"/>
+                                <include reference="XES-jz-XKB"/>
+                                <include reference="wTZ-ju-bn5"/>
+                                <include reference="Cpi-vj-mWQ"/>
+                                <include reference="FBZ-nh-aeS"/>
+                                <include reference="I7Q-Yt-9Iv"/>
+                                <include reference="yAK-ND-2VV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Msv-Bu-0yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="300"/>
+        </scene>
+    </scenes>
+</document>

@@ -27,15 +27,15 @@ class HPDeviceInfo: NSObject {
     }
     
     class func getUUID() -> String? {
-        return UIDevice.currentDevice().identifierForVendor?.UUIDString
+        return UIDevice.current.identifierForVendor?.uuidString
     }
     
     class func getScreenSize() -> CGSize {
-        return UIScreen.mainScreen().bounds.size
+        return UIScreen.main.bounds.size
     }
     
     class func getScreenScale() -> CGFloat {
-        return UIScreen.mainScreen().scale
+        return UIScreen.main.scale
     }
     
     class func getMobileOperatorName() -> String? {
