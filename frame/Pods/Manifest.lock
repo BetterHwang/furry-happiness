@@ -23,11 +23,22 @@ PODS:
     - Result (~> 4.1)
   - ObjectMapper (4.2.0)
   - Result (4.1.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
   - SwiftEventBus (5.0.0)
   - SwiftyJSON (5.0.1)
+  - YBImageBrowser (3.0.9):
+    - YBImageBrowser/Core (= 3.0.9)
+  - YBImageBrowser/Core (3.0.9):
+    - SDWebImage (>= 5.0.0)
+    - YYImage
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
   - BaiduMapKit
@@ -37,6 +48,7 @@ DEPENDENCIES:
   - SQLite.swift
   - SwiftEventBus
   - SwiftyJSON
+  - YBImageBrowser
 
 SPEC REPOS:
   trunk:
@@ -46,9 +58,12 @@ SPEC REPOS:
     - Moya
     - ObjectMapper
     - Result
+    - SDWebImage
     - SQLite.swift
     - SwiftEventBus
     - SwiftyJSON
+    - YBImageBrowser
+    - YYImage
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -57,10 +72,13 @@ SPEC CHECKSUMS:
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: d0d9474e46326bc36c9026a3fe9de86ff8cf29c1
+PODFILE CHECKSUM: fc088c28950c6de0344a72a4a873575f4a89b0ac
 
 COCOAPODS: 1.10.1

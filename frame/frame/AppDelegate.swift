@@ -18,9 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //设置唤醒调用最小时间 后台运行
         application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
-//        let mapManager = BMKMapManager()
-//        mapManager.start("z29pXnxczTLDZ6pZG7LMYcQqLodyQ8zh", generalDelegate: nil)
+//        let mapManager = BMKMapManager.sharedInstance()
+//        mapManager?.start("tVS5SjA2OCNrnTHLbLS17gXhHx5MaCdH", generalDelegate: nil)
 //        Growing.start(withAccountId: "944396c52dd53e96")
+//        UIApplication.shared.windows.first{$0.isKeyWindow}?.rootViewController = UI
+        
+        
         return true
     }
 

@@ -78,7 +78,7 @@ class HorizontalThreeGradientIndicator: UIView, IndicatorProtocol, CAAnimationDe
     }
     
     func layoutPath(_ postion: CGPoint) -> UIBezierPath {
-        let TWO_M_PI: CGFloat = CGFloat(2.0 * M_PI)
+        let TWO_M_PI: CGFloat = CGFloat(2.0 * Double.pi)
         
         return UIBezierPath(arcCenter: postion, radius: Material_Width/2, startAngle: 0, endAngle: TWO_M_PI, clockwise: true)
     }

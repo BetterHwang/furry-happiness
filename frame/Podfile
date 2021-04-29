@@ -9,4 +9,5 @@ target 'frame' do
     pod 'SQLite.swift'
     pod 'SwiftEventBus'
     pod 'BaiduMapKit'
+    pod 'YBImageBrowser'
 end
