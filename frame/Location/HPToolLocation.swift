@@ -7,30 +7,6 @@
 //
 
 import UIKit
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l >= r
-  default:
-    return !(lhs < rhs)
-  }
-}
-
 
 class HPToolLocation: NSObject {
     class func distance(_ loc1: CLLocation?, loc2: CLLocation?) -> CLLocationDegrees {
@@ -57,7 +33,7 @@ class HPToolLocation: NSObject {
             return "未知"
         }
         
-        if distance >= 1000 {
+        if distance! >= 1000 {
             return String(format: "%.1fkm", distance!/1000)
         }else {
             return String(format: "%.0fm", distance!)
@@ -65,6 +41,6 @@ class HPToolLocation: NSObject {
     }
     
     class func convertFromGPSToBaidu(_ location: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
-        return BMKCoorDictionaryDecode(BMKConvertBaiduCoorFrom(location, BMK_COORDTYPE_GPS))//BMK_COORDTYPE_GPS GPS设备采集的原始GPS坐标
+        return BMKCoordTrans(location, .COORDTYPE_GPS, .COORDTYPE_BD09LL)
     }
 }

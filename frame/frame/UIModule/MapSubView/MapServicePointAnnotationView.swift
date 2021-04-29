@@ -9,7 +9,7 @@
 import UIKit
 
 class MapServicePointAnnotationView: BMKAnnotationView {
-    var annotationServicePoint: MapServicePointAnnotation?
+    var annotationServicePoint: BMKPAnnotationBase?
     
     fileprivate var labelBadge: UILabel?
     fileprivate var imageViewServicePoint: UIImageView = UIImageView()
@@ -23,10 +23,10 @@ class MapServicePointAnnotationView: BMKAnnotationView {
     
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
-//        
+//
 //    }
-//    
-    init(annotation: MapServicePointAnnotation, identifier: String) {
+//
+    init(annotation: BMKPAnnotationBase, identifier: String) {
         super.init(annotation: annotation, reuseIdentifier: identifier)
         
         self.annotationServicePoint = annotation
@@ -78,7 +78,7 @@ class MapServicePointAnnotationView: BMKAnnotationView {
         self.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
         self.alpha = 0
         self.backgroundColor = UIColor.white
-        UIView.animate(withDuration: 0.3, animations: { 
+        UIView.animate(withDuration: 0.3, animations: {
             self.frame = CGRect(x: -25, y: -50, width: 50, height: 50)
             self.alpha = 1
             }, completion: { finished in

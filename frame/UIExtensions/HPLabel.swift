@@ -45,7 +45,7 @@ class HPLabel: UILabel {
     
     override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
         //获取实际显示矩形
-        let contentRect = UIEdgeInsetsInsetRect(bounds, textInset)
+        let contentRect = bounds.inset(by: textInset)
         //获取文字显示矩形
         var textRect = super.textRect(forBounds: contentRect, limitedToNumberOfLines: numberOfLines)
         //根据类型修改显示的位置

@@ -9,30 +9,6 @@
 import UIKit
 import CoreLocation
 import MapKit
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l >= r
-  default:
-    return !(lhs < rhs)
-  }
-}
-
 
 @objc protocol HPLocationManagerDelegate: NSObjectProtocol {
     @objc optional func locationManagerWillStartLocation(_ style: LocationStyle)
@@ -48,8 +24,8 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     case inUsage
 }
 
-private typealias CallBackLocationManagerEnterBackground = (Void) -> Void
-private typealias CallBackLocationManagerEnterForeground = (Void) -> Void
+private typealias CallBackLocationManagerEnterBackground = () -> Void
+private typealias CallBackLocationManagerEnterForeground = () -> Void
 
 private let defaultLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
 
@@ -59,7 +35,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
     
     static let sharedInstance = HPLocationManager()
     
-    fileprivate var _callbackCloseLocation: ((Void) -> Void)?
+    fileprivate var _callbackCloseLocation: (() -> Void)?
     fileprivate var _currentLocation: CLLocationCoordinate2D = defaultLocation
     
     fileprivate var listDelegate = [HPLocationManagerDelegate]()
@@ -80,36 +56,42 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
         manageForSystem.delegate = self
         
         //app进入前后台事件
-        NotificationCenter.default.addObserver(self, selector: #selector(HPLocationManager.appDidEnterBackground(_:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(HPLocationManager.appWillEnterForeground(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(HPLocationManager.appWillTerminate(_:)), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(HPLocationManager.appDidEnterBackground(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HPLocationManager.appWillEnterForeground(_:)), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HPLocationManager.appWillTerminate(_:)), name: UIApplication.willTerminateNotification, object: nil)
     }
     
-    func appDidEnterBackground(_ notice: Notification) {
+    @objc func appDidEnterBackground(_ notice: Notification) {
         //已经进入后台协议
         for delegateItem in listDelegate {
             delegateItem.locationManagerDidEnterBackGround?()
         }
     }
     
-    func appWillEnterForeground(_ notice: Notification) {
+    @objc func appWillEnterForeground(_ notice: Notification) {
         //进入前台前调用协议
         for delegateItem in listDelegate {
             delegateItem.locationManagerWillEnterForeGround?()
         }
     }
     
-    func appWillTerminate(_ notice: Notification) {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
+    @objc func appWillTerminate(_ notice: Notification) {
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.willTerminateNotification, object: nil)
     }
     
-    func startLocation(_ style: LocationStyle, callbackCloseLocation: ((Void) -> Void)? = nil) {
+    func startLocation(_ style: LocationStyle, callbackCloseLocation: (() -> Void)? = nil) {
         _callbackCloseLocation = callbackCloseLocation
         
         if !enableLocation() {
-            UIAlertView(title: "温馨提示", message: "系统定位服务被关闭，请到设置中设置", delegate: nil, cancelButtonTitle: "取消", otherButtonTitles: "确定").show()
+            let alert = UIAlertController.init(title: "温馨提示", message: "系统定位服务被关闭，请到设置中设置", preferredStyle: .alert)
+            alert.addAction(UIAlertAction.init(title: "确定", style: .default, handler: { (action) in
+                //goto 设置
+                UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
+            }))
+            alert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: nil))
             return
         }
         
@@ -215,7 +197,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
                 let controller = UIAlertController(title: "温馨提示", message: "定位被禁了，是否跳转到系统设置中修改？", preferredStyle: .alert)
                 controller.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
                 controller.addAction(UIAlertAction(title: "去设置", style: .default, handler: { (action: UIAlertAction) in
-                    UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+                    UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
                 }))
                 
                 presentingController.present(controller, animated: true, completion: nil)
@@ -229,10 +211,6 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
         }
         
         return true
-    }
-    
-    func convertFromGPSToBaidu(_ location: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
-        return BMKCoorDictionaryDecode(BMKConvertBaiduCoorFrom(location, BMK_COORDTYPE_GPS))
     }
     
     //定位功能状态改变
@@ -257,7 +235,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
         geocoder.reverseGeocodeLocation(locations[0]) { (listMark, error) in
             //有错误 返回
             if nil != error {
-                NSLog("\(error?.localizedDescription)")
+                NSLog("\(error?.localizedDescription ?? "")")
                 for delegateItem in self.listDelegate {
                     delegateItem.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: nil)
                 }
@@ -265,7 +243,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
             }
             
             //信息为空 返回
-            if nil == listMark || 0 >= listMark?.count {
+            if nil == listMark || 0 >= listMark!.count {
                 for delegateItem in self.listDelegate {
                     delegateItem.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: nil)
                 }

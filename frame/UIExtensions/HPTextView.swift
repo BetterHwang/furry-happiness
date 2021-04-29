@@ -79,7 +79,7 @@ class HPTextView: UITextView {
         labelPlaceHolder?.font = self.fontTextView
         labelPlaceHolder?.numberOfLines = 0
         labelPlaceHolder?.textColor = UIColor(red: 115/255, green: 115/255, blue: 115/255, alpha: 1)
-        labelPlaceHolder?.textInset = UIEdgeInsetsMake(self.textContainerInset.top, 5, self.textContainerInset.bottom, 5)
+        labelPlaceHolder?.textInset = UIEdgeInsets.init(top: self.textContainerInset.top, left: 5, bottom: self.textContainerInset.bottom, right: 5)
     }
         
     func customInit(_ frame: CGRect) {
@@ -87,7 +87,7 @@ class HPTextView: UITextView {
         initPlaceHolderLabel(frame)
 //        initTextLengthLabel(frame)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(HPTextView.textDidChanged), name: NSNotification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(HPTextView.textDidChanged), name: UITextView.textDidChangeNotification, object: self)
     }
     
     override func awakeFromNib() {
@@ -101,7 +101,7 @@ class HPTextView: UITextView {
         labelPlaceHolder?.frame = self.bounds
     }
     
-    func textDidChanged() {
+    @objc func textDidChanged() {
         if nil == self.text || 0 >= self.text?.lengthOfBytes(using: String.Encoding.utf8) {
             labelPlaceHolder?.isHidden = false
         }else {

@@ -28,45 +28,38 @@ extension String {
         return (self as NSString).doubleValue
     }
     
-    var length : Int {
-        return (self as NSString).length
+    var arrayUInt8Value: [UInt8] {
+        return Array(self.utf8)
     }
     
     func firstIndexOfCharacter(_ char: Character) -> Int? {
-        if let index = self.characters.index(of: char) {
-            return self.characters.distance(from: self.startIndex, to: index)
+        if let index = self.firstIndex(of: char) {
+            return self.distance(from: self.startIndex, to: index)
         }
+        
         return nil
     }
     
     func isContainCharacter(_ char: Character) -> Bool {
         
-        if let index = self.firstIndexOfCharacter(char) {
+        if self.firstIndexOfCharacter(char) != nil {
             return true
         } else {
             return false
         }
     }
     
-    func isHasSameStr(_ str:String) -> Bool {
-        
-        var flag =  (str as NSString).range(of: self).length > 0
-        if !flag {
-            flag = (self as NSString).range(of: str).length > 0
-        }
-        return flag
-    }
-    
     func stringByTransformFromChineseToPinyin() -> String {
+        if (0 >= self.count) {
+            return self
+        }
         
-        if (self.length > 0) {
-            let ms = NSMutableString(string: self)
-            
-            CFStringTransform(ms, nil, kCFStringTransformMandarinLatin, false)
-            
-            if (CFStringTransform(ms, nil, kCFStringTransformStripDiacritics, false)) {
-                return ms as String
-            }
+        let ms = NSMutableString(string: self)
+        
+        CFStringTransform(ms, nil, kCFStringTransformMandarinLatin, false)
+        
+        if (CFStringTransform(ms, nil, kCFStringTransformStripDiacritics, false)) {
+            return ms as String
         }
         
         return self

@@ -1,0 +1,15 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift" "${PODS_CONFIGURATION_BUILD_DIR}/Moya" "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper" "${PODS_CONFIGURATION_BUILD_DIR}/Result" "${PODS_CONFIGURATION_BUILD_DIR}/SQLite.swift" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftEventBus" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON" "${PODS_ROOT}/BaiduMapKit/BaiduMapKit"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Moya/Moya.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper/ObjectMapper.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Result/Result.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SQLite.swift/SQLite.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftEventBus/SwiftEventBus.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/BaiduMapKit/BaiduMapKit/thirdlibs"
+OTHER_LDFLAGS = $(inherited) -ObjC -w -l"c++" -l"crypto" -l"sqlite3" -l"sqlite3.0" -l"ssl" -l"z" -framework "Accelerate" -framework "Alamofire" -framework "BaiduMapAPI_Base" -framework "BaiduMapAPI_Cloud" -framework "BaiduMapAPI_Map" -framework "BaiduMapAPI_Search" -framework "BaiduMapAPI_Utils" -framework "CoreGraphics" -framework "CoreLocation" -framework "CryptoSwift" -framework "Foundation" -framework "Moya" -framework "ObjectMapper" -framework "OpenGLES" -framework "QuartzCore" -framework "Result" -framework "SQLite" -framework "Security" -framework "SwiftEventBus" -framework "SwiftyJSON" -framework "SystemConfiguration"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

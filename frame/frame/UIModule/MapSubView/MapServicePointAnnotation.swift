@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MapServicePointAnnotation: BMKPointAnnotation {
+class BMKPAnnotationBase: BMKPointAnnotation {
     
 
 }

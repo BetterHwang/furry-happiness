@@ -1,0 +1,66 @@
+PODS:
+  - Alamofire (4.9.1)
+  - BaiduMapKit (6.2.0):
+    - BaiduMapKit/Base (= 6.2.0)
+    - BaiduMapKit/Cloud (= 6.2.0)
+    - BaiduMapKit/Map (= 6.2.0)
+    - BaiduMapKit/Search (= 6.2.0)
+    - BaiduMapKit/Utils (= 6.2.0)
+  - BaiduMapKit/Base (6.2.0)
+  - BaiduMapKit/Cloud (6.2.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Map (6.2.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Search (6.2.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Utils (6.2.0):
+    - BaiduMapKit/Base
+  - CryptoSwift (1.4.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - ObjectMapper (4.2.0)
+  - Result (4.1.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftEventBus (5.0.0)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - CryptoSwift
+  - Moya
+  - ObjectMapper
+  - SQLite.swift
+  - SwiftEventBus
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BaiduMapKit
+    - CryptoSwift
+    - Moya
+    - ObjectMapper
+    - Result
+    - SQLite.swift
+    - SwiftEventBus
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  BaiduMapKit: 907c6d9b74f66c3ff4741fc4b568ae0b339917f8
+  CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: d0d9474e46326bc36c9026a3fe9de86ff8cf29c1
+
+COCOAPODS: 1.10.1

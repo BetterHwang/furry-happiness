@@ -1,0 +1,12 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'frame' do
+    pod 'ObjectMapper'
+    pod 'SwiftyJSON'
+    pod 'Moya'
+    pod 'CryptoSwift'
+    pod 'SQLite.swift'
+    pod 'SwiftEventBus'
+    pod 'BaiduMapKit'
+end

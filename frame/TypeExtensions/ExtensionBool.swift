@@ -21,6 +21,6 @@ extension Bool{
     }
     
     func toString(_ format: String) -> String {
-        return NSString(format: format as NSString, self as CVarArg) as String
+        return String(format: format, self as CVarArg)
     }
 }

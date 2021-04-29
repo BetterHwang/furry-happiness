@@ -84,7 +84,7 @@ class HPTextViewWithLimitedLength: UIView {
         initTextView()
         initTextLengthLabel()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(HPTextView.textDidChanged), name: NSNotification.Name.UITextViewTextDidChange, object: self.textView)
+        NotificationCenter.default.addObserver(self, selector: #selector(HPTextView.textDidChanged), name: UITextView.textDidChangeNotification, object: self.textView)
     }
     
     override func layoutSubviews() {
@@ -116,7 +116,7 @@ class HPTextViewWithLimitedLength: UIView {
         labelTextLength?.font = UIFont.systemFont(ofSize: 16)
         labelTextLength?.numberOfLines = 1
         labelTextLength?.textColor = UIColor(red: 115/255, green: 115/255, blue: 115/255, alpha: 1)
-        labelTextLength?.textInset = UIEdgeInsetsMake(0, 0, 5, 10)
+        labelTextLength?.textInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 5, right: 10)
         
         if nil == self.textView?.text || 0 >= self.textView?.text?.lengthOfBytes(using: String.Encoding.utf8) {
             labelTextLength?.text = "0/\(limitedTextLength)"

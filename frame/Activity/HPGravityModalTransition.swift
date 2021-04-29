@@ -103,7 +103,7 @@ class HPGravityModalTransition: NSObject, UIViewControllerAnimatedTransitioning,
 //        animator.delegate = self
 //        lastTransitionContext?.completeTransition(true)
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 300, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 300, options: UIView.AnimationOptions(), animations: {
             toVC?.view.frame.origin = CGPoint.zero
             }) { (finished) in
                 transitionContext.completeTransition(true)

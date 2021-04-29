@@ -10,13 +10,8 @@ import Foundation
 
 //Double类型扩展
 extension Double {
-    
-    var stringValue: String {
-        return NSString(format: "%f", self) as String
-    }
-    
-    func toString(_ format: String) -> String {
-        return NSString(format: format as NSString, self) as String
+    func toString(_ format: String = "%lf") -> String {
+        return String(format: format, self)
     }
 }
 

@@ -48,7 +48,7 @@ class HPNetworkManager: NSObject {
         _reach?.stopNotifier()
     }
     
-    func reachabilityChanged(_ notice: Notification) {
+    @objc func reachabilityChanged(_ notice: Notification) {
         
 //        switch _reach.currentReachabilityStatus() {
 //        case .NotReachable:
