@@ -41,7 +41,6 @@ extension String {
     }
     
     func isContainCharacter(_ char: Character) -> Bool {
-        
         if self.firstIndexOfCharacter(char) != nil {
             return true
         } else {
@@ -63,5 +62,17 @@ extension String {
         }
         
         return self
+    }
+    
+    func getHeight(limitedWidth: CGFloat, attributes: [NSAttributedString.Key : Any]) -> CGFloat {
+        let limitedSize = CGSize(width: limitedWidth, height: CGFloat.greatestFiniteMagnitude)
+        let size = self.boundingRect(with: limitedSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return size.height
+    }
+    
+    func getWidth(limitedHeight: CGFloat, attributes: [NSAttributedString.Key : Any]) -> CGFloat {
+        let limitedSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: limitedHeight)
+        let size = self.boundingRect(with: limitedSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return size.width
     }
 }

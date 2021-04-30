@@ -7,30 +7,6 @@
 //
 
 import UIKit
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l >= r
-  default:
-    return !(lhs < rhs)
-  }
-}
-
 
 class HPTextView: UITextView {
     
@@ -65,8 +41,6 @@ class HPTextView: UITextView {
     
     init(frame: CGRect) {
         super.init(frame: frame, textContainer: nil)
-        
-        customInit(self.bounds)
     }
     
     func initPlaceHolderLabel(_ frame: CGRect) {
@@ -102,10 +76,14 @@ class HPTextView: UITextView {
     }
     
     @objc func textDidChanged() {
-        if nil == self.text || 0 >= self.text?.lengthOfBytes(using: String.Encoding.utf8) {
+        if nil == self.text || 0 >= self.text?.count ?? 0 {
             labelPlaceHolder?.isHidden = false
         }else {
             labelPlaceHolder?.isHidden = true
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: self)
     }
 }

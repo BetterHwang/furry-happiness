@@ -7,30 +7,6 @@
 //
 
 import UIKit
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l >= r
-  default:
-    return !(lhs < rhs)
-  }
-}
-
 
 //高度必须大于40
 class HPTextViewWithLimitedLength: UIView {
@@ -118,7 +94,7 @@ class HPTextViewWithLimitedLength: UIView {
         labelTextLength?.textColor = UIColor(red: 115/255, green: 115/255, blue: 115/255, alpha: 1)
         labelTextLength?.textInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 5, right: 10)
         
-        if nil == self.textView?.text || 0 >= self.textView?.text?.lengthOfBytes(using: String.Encoding.utf8) {
+        if nil == self.textView?.text || 0 >= self.textView?.text?.count ?? 0 {
             labelTextLength?.text = "0/\(limitedTextLength)"
         }else {
             labelTextLength?.text = "\((self.textView.text! as NSString).length)/\(limitedTextLength)"
@@ -126,10 +102,14 @@ class HPTextViewWithLimitedLength: UIView {
     }
     
     func textDidChanged() {
-        if nil == self.textView?.text || 0 >= self.textView?.text?.lengthOfBytes(using: String.Encoding.utf8) {
+        if nil == self.textView?.text || 0 >= self.textView?.text?.count ?? 0 {
             labelTextLength?.text = "0/\(limitedTextLength)"
         }else {
             labelTextLength?.text = "\((self.textView.text! as NSString).length)/\(limitedTextLength)"
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: self.textView)
     }
 }

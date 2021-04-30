@@ -16,6 +16,9 @@
 		184CF66C263A9EF30006D102 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CF66B263A9EF30006D102 /* BaseRequest.swift */; };
 		184CF670263A9EFF0006D102 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CF66F263A9EFF0006D102 /* BaseModel.swift */; };
 		184CF674263AA6B90006D102 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CF673263AA6B90006D102 /* AppConstants.swift */; };
+		184F1326263B94F2000E8C2D /* HBProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1325263B94F2000E8C2D /* HBProgressView.swift */; };
+		184F1350263BEA45000E8C2D /* HBLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F134F263BEA45000E8C2D /* HBLoadingView.swift */; };
+		184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1353263BED22000E8C2D /* BaseEntity.swift */; };
 		18EB0D37263A6E76003C04BE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */; };
 		7613DD9125A039F1C419461A /* Pods_frame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD804E60DBDFCD0286E442AB /* Pods_frame.framework */; };
 		79061CD21CF44297000BA6D7 /* HPToolLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79061CD11CF44297000BA6D7 /* HPToolLocation.swift */; };
@@ -114,6 +117,9 @@
 		184CF66B263A9EF30006D102 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		184CF66F263A9EFF0006D102 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		184CF673263AA6B90006D102 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		184F1325263B94F2000E8C2D /* HBProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBProgressView.swift; sourceTree = "<group>"; };
+		184F134F263BEA45000E8C2D /* HBLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBLoadingView.swift; sourceTree = "<group>"; };
+		184F1353263BED22000E8C2D /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		79061CD11CF44297000BA6D7 /* HPToolLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPToolLocation.swift; sourceTree = "<group>"; };
 		792CDDEE1CF699D90045F103 /* Growing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Growing.h; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				184CF66B263A9EF30006D102 /* BaseRequest.swift */,
+				184F1353263BED22000E8C2D /* BaseEntity.swift */,
 				184CF66F263A9EFF0006D102 /* BaseModel.swift */,
 				184CF673263AA6B90006D102 /* AppConstants.swift */,
 			);
@@ -416,6 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				7982F3991D6D804F00313038 /* HorizontalThreeGradientIndicator.swift */,
+				184F1325263B94F2000E8C2D /* HBProgressView.swift */,
+				184F134F263BEA45000E8C2D /* HBLoadingView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -675,9 +684,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEventBus/SwiftEventBus.framework",
@@ -689,9 +696,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEventBus.framework",
@@ -735,12 +740,14 @@
 			files = (
 				7998F6351D3C9165007F6A01 /* ExtensionDouble.swift in Sources */,
 				79321E7C1D1D1F4200FAC209 /* mask.c in Sources */,
+				184F1326263B94F2000E8C2D /* HBProgressView.swift in Sources */,
 				798782921DF10C3F005C76A8 /* ActivityViewController.swift in Sources */,
 				184CF674263AA6B90006D102 /* AppConstants.swift in Sources */,
 				79321E7E1D1D1F4200FAC209 /* qrinput.c in Sources */,
 				79B1549B1D0167BA00949E6A /* HPDeviceInfo.swift in Sources */,
 				79321E801D1D1F4200FAC209 /* rscode.c in Sources */,
 				7998F6371D3C9172007F6A01 /* ExtensionBool.swift in Sources */,
+				184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */,
 				7998F6391D3C938D007F6A01 /* HPLabel.swift in Sources */,
 				7982F39A1D6D804F00313038 /* HorizontalThreeGradientIndicator.swift in Sources */,
 				7998F6311D3C90FF007F6A01 /* ExtensionInt.swift in Sources */,
@@ -773,6 +780,7 @@
 				79729E721CCE17220025C7FA /* ViewController.swift in Sources */,
 				7982F3A81D6ECBBB00313038 /* MapServicePointAnnotation.swift in Sources */,
 				79321E841D1D1F4200FAC209 /* QRCodeReaderView.m in Sources */,
+				184F1350263BEA45000E8C2D /* HBLoadingView.swift in Sources */,
 				184CF66C263A9EF30006D102 /* BaseRequest.swift in Sources */,
 				7982F3931D6D725D00313038 /* ExtensionUIApplication.swift in Sources */,
 				79729E701CCE17220025C7FA /* AppDelegate.swift in Sources */,

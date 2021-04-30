@@ -185,8 +185,14 @@ class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDele
     }
 
     @IBAction func onBtnClickPresent(_ sender: AnyObject) {
-        ActivityViewController.present(self)
+//        ActivityViewController.present(self)
+        HBLoadingView.show()
     }
+    
+    @objc func test() {
+        HBLoadingView.show()
+    }
+    
     //地图返回
     func mapView(_ mapView: BMKMapView!, viewFor annotation: BMKAnnotation!) -> BMKAnnotationView! {
         if nil != annotation && annotation.isKind(of: BMKPAnnotationBase.classForCoder()) {

@@ -115,7 +115,7 @@ class MapCenterAnnotationView: UIView {
             return Min_TextWidth
         }
         
-        let textWidth = UIView.getStringSizeWithLimitedHeight(address!, heigth: 20, font: UIFont.systemFont(ofSize: 16)).width
+        let textWidth = address!.getWidth(limitedHeight: 20, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16)])
         
         return (textWidth < Min_TextWidth ? Min_TextWidth : (textWidth > Max_TextWidth ? Max_TextWidth : textWidth)) + 2*Padding
     }

@@ -16,13 +16,7 @@ PODS:
   - BaiduMapKit/Utils (6.2.0):
     - BaiduMapKit/Base
   - CryptoSwift (1.4.0)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
   - ObjectMapper (4.2.0)
-  - Result (4.1.0)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
@@ -41,9 +35,9 @@ PODS:
   - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
+  - Alamofire
   - BaiduMapKit
   - CryptoSwift
-  - Moya
   - ObjectMapper
   - SQLite.swift
   - SwiftEventBus
@@ -55,9 +49,7 @@ SPEC REPOS:
     - Alamofire
     - BaiduMapKit
     - CryptoSwift
-    - Moya
     - ObjectMapper
-    - Result
     - SDWebImage
     - SQLite.swift
     - SwiftEventBus
@@ -69,9 +61,7 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BaiduMapKit: 907c6d9b74f66c3ff4741fc4b568ae0b339917f8
   CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
@@ -79,6 +69,6 @@ SPEC CHECKSUMS:
   YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: fc088c28950c6de0344a72a4a873575f4a89b0ac
+PODFILE CHECKSUM: 2b039f33518b8fcf6b71a4885e3a76bdc7adfe84
 
 COCOAPODS: 1.10.1
