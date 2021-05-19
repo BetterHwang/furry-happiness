@@ -11,4 +11,5 @@ target 'frame' do
     pod 'SwiftEventBus'
     pod 'BaiduMapKit'
     pod 'YBImageBrowser'
+    pod 'Masonry'
 end

@@ -23,5 +23,6 @@
 #import "Reachability.h"
 
 #import "QRCodeGenerator.h"
+#import <Masonry/Masonry.h>
 
 #endif /* frame_Bridging_Header_h */

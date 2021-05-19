@@ -27,7 +27,8 @@ class BaseRequest {
     @discardableResult class func request<T: BaseModel>(
         urlString: String,
         params: [String: Any],
-        method: HTTPMethod = .get,
+        method: HTTPMethod = .post,
+        viewModel: BaseViewModel? = nil,
         entity: BaseEntity<T>? = nil,
         block: ((_ result: Bool, _ model: T?, _ error: NSError?)->Void)? = nil,
         showLoading: Bool = false,
@@ -42,6 +43,7 @@ class BaseRequest {
                     guard let model = Mapper<BaseModelRet<T>>().map(JSONObject: value) else {
                         DispatchQueue.main.async {
                             let error = NSError.init(domain: "Mapper Parse Error", code: -1, userInfo: ["msg" : "ObjectMapper解析错误"])
+                            viewModel?.onRecv(urlString: urlString, result: false, dataModel: nil, error: error)
                             entity?.onFailed(url: urlString, error: error)
                             block?(false, nil, error)
                         }
@@ -51,6 +53,7 @@ class BaseRequest {
                     if model.ret != 0 {
                         DispatchQueue.main.async {
                             let error = NSError.init(domain: "JSON Data Format Error", code: model.ret ?? -2, userInfo: ["msg" : model.msg ?? ""])
+                            viewModel?.onRecv(urlString: urlString, result: false, dataModel: nil, error: error)
                             entity?.onFailed(url: urlString, error: error)
                             block?(false, nil, error)
                         }
@@ -58,12 +61,14 @@ class BaseRequest {
                     }
                     
                     DispatchQueue.main.async {
+                        viewModel?.onRecv(urlString: urlString, result: true, dataModel: model.data, error: nil)
                         entity?.onRecv(url: urlString, model: model.data)
                         block?(true, model.data, nil)
                     }
                     break
                 case .failure(let error):
                     DispatchQueue.main.async {
+                        viewModel?.onRecv(urlString: urlString, result: false, dataModel: nil, error: error as NSError)
                         entity?.onFailed(url: urlString, error: error as NSError)
                         block?(false, nil, error as NSError)
                     }

@@ -8,9 +8,8 @@
 
 import UIKit
 
-@objc
-protocol HPPageViewControllerDelegate: UIPageViewControllerDelegate {
-    @objc optional func sss()
+@objc protocol HPPageViewControllerDelegate: UIPageViewControllerDelegate {
+    
 }
 
 class HPPageViewController: UIPageViewController {

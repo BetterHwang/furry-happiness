@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD02645162C001B96D7 /* HBMultiTabController.swift */; };
+		1835FBD7264516AC001B96D7 /* HBMultiTabChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD6264516AC001B96D7 /* HBMultiTabChildController.swift */; };
+		1835FBDC264519FD001B96D7 /* HBCommonTabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBDB264519FD001B96D7 /* HBCommonTabScrollView.swift */; };
+		1835FBE026451B6E001B96D7 /* HBCommonTabItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBDF26451B6E001B96D7 /* HBCommonTabItemCell.swift */; };
+		1835FBE526453245001B96D7 /* HBMultiTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBE426453245001B96D7 /* HBMultiTabView.swift */; };
+		1835FBE926453326001B96D7 /* HBMultiTabViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBE826453326001B96D7 /* HBMultiTabViewConfig.swift */; };
 		184CF618263A81D40006D102 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF616263A81C30006D102 /* libcrypto.a */; };
 		184CF61B263A81D60006D102 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF617263A81C30006D102 /* libssl.a */; };
 		184CF621263A83080006D102 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF620263A83080006D102 /* libc++.tbd */; };
@@ -19,6 +25,15 @@
 		184F1326263B94F2000E8C2D /* HBProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1325263B94F2000E8C2D /* HBProgressView.swift */; };
 		184F1350263BEA45000E8C2D /* HBLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F134F263BEA45000E8C2D /* HBLoadingView.swift */; };
 		184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1353263BED22000E8C2D /* BaseEntity.swift */; };
+		187978DB264BB1C400437E24 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187978DA264BB1C400437E24 /* BaseTableCell.swift */; };
+		187978E6264BE5C000437E24 /* HPSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187978E5264BE5C000437E24 /* HPSegment.swift */; };
+		1894F5C5264399B100A68C37 /* YYAnimatedImageView+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894F5C4264399B100A68C37 /* YYAnimatedImageView+ext.m */; };
+		1894F5CC2643BBDB00A68C37 /* Util_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894F5CB2643BBDB00A68C37 /* Util_Number.swift */; };
+		1899B8112654A0A8004F1CD3 /* BaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8102654A0A8004F1CD3 /* BaseTableController.swift */; };
+		1899B8132654A0BF004F1CD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8122654A0BF004F1CD3 /* BaseViewController.swift */; };
+		1899B8152654A0D4004F1CD3 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8142654A0D3004F1CD3 /* BaseNavigationController.swift */; };
+		1899B8172654A0F3004F1CD3 /* BaseTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8162654A0F3004F1CD3 /* BaseTabController.swift */; };
+		1899B81A2654AD21004F1CD3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8192654AD21004F1CD3 /* BaseViewModel.swift */; };
 		18EB0D37263A6E76003C04BE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */; };
 		7613DD9125A039F1C419461A /* Pods_frame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD804E60DBDFCD0286E442AB /* Pods_frame.framework */; };
 		79061CD21CF44297000BA6D7 /* HPToolLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79061CD11CF44297000BA6D7 /* HPToolLocation.swift */; };
@@ -108,6 +123,12 @@
 /* Begin PBXFileReference section */
 		072EF54347ABE94D970839BB /* Pods-frame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frame.release.xcconfig"; path = "Target Support Files/Pods-frame/Pods-frame.release.xcconfig"; sourceTree = "<group>"; };
 		1490EA1C2F22499545001CA8 /* Pods-frame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frame.debug.xcconfig"; path = "Target Support Files/Pods-frame/Pods-frame.debug.xcconfig"; sourceTree = "<group>"; };
+		1835FBD02645162C001B96D7 /* HBMultiTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabController.swift; sourceTree = "<group>"; };
+		1835FBD6264516AC001B96D7 /* HBMultiTabChildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabChildController.swift; sourceTree = "<group>"; };
+		1835FBDB264519FD001B96D7 /* HBCommonTabScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBCommonTabScrollView.swift; sourceTree = "<group>"; };
+		1835FBDF26451B6E001B96D7 /* HBCommonTabItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBCommonTabItemCell.swift; sourceTree = "<group>"; };
+		1835FBE426453245001B96D7 /* HBMultiTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabView.swift; sourceTree = "<group>"; };
+		1835FBE826453326001B96D7 /* HBMultiTabViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabViewConfig.swift; sourceTree = "<group>"; };
 		184CF616263A81C30006D102 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		184CF617263A81C30006D102 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		184CF620263A83080006D102 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -120,6 +141,16 @@
 		184F1325263B94F2000E8C2D /* HBProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBProgressView.swift; sourceTree = "<group>"; };
 		184F134F263BEA45000E8C2D /* HBLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBLoadingView.swift; sourceTree = "<group>"; };
 		184F1353263BED22000E8C2D /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		187978DA264BB1C400437E24 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
+		187978E5264BE5C000437E24 /* HPSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPSegment.swift; sourceTree = "<group>"; };
+		1894F5C3264399B100A68C37 /* YYAnimatedImageView+ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYAnimatedImageView+ext.h"; sourceTree = "<group>"; };
+		1894F5C4264399B100A68C37 /* YYAnimatedImageView+ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YYAnimatedImageView+ext.m"; sourceTree = "<group>"; };
+		1894F5CB2643BBDB00A68C37 /* Util_Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util_Number.swift; sourceTree = "<group>"; };
+		1899B8102654A0A8004F1CD3 /* BaseTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableController.swift; sourceTree = "<group>"; };
+		1899B8122654A0BF004F1CD3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1899B8142654A0D3004F1CD3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		1899B8162654A0F3004F1CD3 /* BaseTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabController.swift; sourceTree = "<group>"; };
+		1899B8192654AD21004F1CD3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		79061CD11CF44297000BA6D7 /* HPToolLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPToolLocation.swift; sourceTree = "<group>"; };
 		792CDDEE1CF699D90045F103 /* Growing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Growing.h; sourceTree = "<group>"; };
@@ -245,6 +276,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1835FBCF264515FB001B96D7 /* MultiTabController */ = {
+			isa = PBXGroup;
+			children = (
+				1835FBEC26453A38001B96D7 /* Controller */,
+				1835FBE32645320F001B96D7 /* ViewModel */,
+				1835FBDA264519E2001B96D7 /* View */,
+			);
+			path = MultiTabController;
+			sourceTree = "<group>";
+		};
+		1835FBDA264519E2001B96D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1835FBDB264519FD001B96D7 /* HBCommonTabScrollView.swift */,
+				1835FBDF26451B6E001B96D7 /* HBCommonTabItemCell.swift */,
+				1835FBE426453245001B96D7 /* HBMultiTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1835FBE32645320F001B96D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1835FBE826453326001B96D7 /* HBMultiTabViewConfig.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1835FBEC26453A38001B96D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1835FBD02645162C001B96D7 /* HBMultiTabController.swift */,
+				1835FBD6264516AC001B96D7 /* HBMultiTabChildController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		184CF615263A81C30006D102 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,12 +325,59 @@
 		184CF66A263A9EC80006D102 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				1899B8182654A71E004F1CD3 /* BaseViewModel */,
+				1899B80F2654A074004F1CD3 /* BaseController */,
+				187978D9264BB19400437E24 /* BaseView */,
 				184CF66B263A9EF30006D102 /* BaseRequest.swift */,
 				184F1353263BED22000E8C2D /* BaseEntity.swift */,
 				184CF66F263A9EFF0006D102 /* BaseModel.swift */,
 				184CF673263AA6B90006D102 /* AppConstants.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		187978D9264BB19400437E24 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				187978DA264BB1C400437E24 /* BaseTableCell.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		1894F5C22643998300A68C37 /* YYAnimatedImageView+ext */ = {
+			isa = PBXGroup;
+			children = (
+				1894F5C3264399B100A68C37 /* YYAnimatedImageView+ext.h */,
+				1894F5C4264399B100A68C37 /* YYAnimatedImageView+ext.m */,
+			);
+			path = "YYAnimatedImageView+ext";
+			sourceTree = "<group>";
+		};
+		1894F5CA2643BB7400A68C37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1894F5CB2643BBDB00A68C37 /* Util_Number.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1899B80F2654A074004F1CD3 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				1899B8102654A0A8004F1CD3 /* BaseTableController.swift */,
+				1899B8122654A0BF004F1CD3 /* BaseViewController.swift */,
+				1899B8142654A0D3004F1CD3 /* BaseNavigationController.swift */,
+				1899B8162654A0F3004F1CD3 /* BaseTabController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		1899B8182654A71E004F1CD3 /* BaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1899B8192654AD21004F1CD3 /* BaseViewModel.swift */,
+			);
+			path = BaseViewModel;
 			sourceTree = "<group>";
 		};
 		69504A8346E3E40D0CF179FB /* Pods */ = {
@@ -344,6 +459,8 @@
 		79729E631CCE17220025C7FA = {
 			isa = PBXGroup;
 			children = (
+				1835FBCF264515FB001B96D7 /* MultiTabController */,
+				1894F5CA2643BB7400A68C37 /* Utils */,
 				798782901DF10C20005C76A8 /* Activity */,
 				79DB864C1D5D983900DFB4EC /* Mixcom */,
 				79321E631D1D1F4200FAC209 /* QRCode */,
@@ -464,6 +581,7 @@
 				7998F63A1D3CAF9F007F6A01 /* HPTextViewWithLimitedLength.swift */,
 				798D85DA1D659EC700EF8B21 /* HPPageViewController.swift */,
 				7982F3A91D70149E00313038 /* HPWebImageManager.swift */,
+				187978E5264BE5C000437E24 /* HPSegment.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -471,6 +589,7 @@
 		7998F6271D3C907E007F6A01 /* TypeExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				1894F5C22643998300A68C37 /* YYAnimatedImageView+ext */,
 				7998F62E1D3C90F0007F6A01 /* ExtensionString.swift */,
 				7998F6301D3C90FF007F6A01 /* ExtensionInt.swift */,
 				7998F6321D3C914C007F6A01 /* ExtensionFloat.swift */,
@@ -684,6 +803,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
@@ -696,6 +816,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
@@ -741,24 +862,33 @@
 				7998F6351D3C9165007F6A01 /* ExtensionDouble.swift in Sources */,
 				79321E7C1D1D1F4200FAC209 /* mask.c in Sources */,
 				184F1326263B94F2000E8C2D /* HBProgressView.swift in Sources */,
+				1894F5C5264399B100A68C37 /* YYAnimatedImageView+ext.m in Sources */,
 				798782921DF10C3F005C76A8 /* ActivityViewController.swift in Sources */,
 				184CF674263AA6B90006D102 /* AppConstants.swift in Sources */,
 				79321E7E1D1D1F4200FAC209 /* qrinput.c in Sources */,
+				1894F5CC2643BBDB00A68C37 /* Util_Number.swift in Sources */,
+				1899B8152654A0D4004F1CD3 /* BaseNavigationController.swift in Sources */,
 				79B1549B1D0167BA00949E6A /* HPDeviceInfo.swift in Sources */,
 				79321E801D1D1F4200FAC209 /* rscode.c in Sources */,
 				7998F6371D3C9172007F6A01 /* ExtensionBool.swift in Sources */,
 				184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */,
+				1899B81A2654AD21004F1CD3 /* BaseViewModel.swift in Sources */,
 				7998F6391D3C938D007F6A01 /* HPLabel.swift in Sources */,
+				187978E6264BE5C000437E24 /* HPSegment.swift in Sources */,
 				7982F39A1D6D804F00313038 /* HorizontalThreeGradientIndicator.swift in Sources */,
 				7998F6311D3C90FF007F6A01 /* ExtensionInt.swift in Sources */,
 				7998F63B1D3CAF9F007F6A01 /* HPTextViewWithLimitedLength.swift in Sources */,
 				79321E7D1D1D1F4200FAC209 /* qrencode.c in Sources */,
 				79DB864E1D5D9B1700DFB4EC /* MCEntity.swift in Sources */,
+				1899B8112654A0A8004F1CD3 /* BaseTableController.swift in Sources */,
 				798D85DB1D659EC700EF8B21 /* HPPageViewController.swift in Sources */,
 				7998F6331D3C914C007F6A01 /* ExtensionFloat.swift in Sources */,
 				7982F3951D6D740C00313038 /* ExtensionUIViewController.swift in Sources */,
 				7982F39E1D6DABDE00313038 /* MapCenterAnnotationView.swift in Sources */,
+				1835FBDC264519FD001B96D7 /* HBCommonTabScrollView.swift in Sources */,
 				7998F62F1D3C90F0007F6A01 /* ExtensionString.swift in Sources */,
+				1835FBD7264516AC001B96D7 /* HBMultiTabChildController.swift in Sources */,
+				1835FBE026451B6E001B96D7 /* HBCommonTabItemCell.swift in Sources */,
 				79DB86501D5DA13300DFB4EC /* EncryptUtils.swift in Sources */,
 				79B1549E1D016E3A00949E6A /* HPNetworkManager.swift in Sources */,
 				79321E7F1D1D1F4200FAC209 /* qrspec.c in Sources */,
@@ -766,16 +896,22 @@
 				7998F6261D3C87C2007F6A01 /* HPTextView.swift in Sources */,
 				7982F3AA1D70149E00313038 /* HPWebImageManager.swift in Sources */,
 				798782961DF10FA2005C76A8 /* HPGravityModalTransition.swift in Sources */,
+				187978DB264BB1C400437E24 /* BaseTableCell.swift in Sources */,
 				79729E9F1CCE196A0025C7FA /* HPLocationManager.swift in Sources */,
 				79E931F51CFD37A600C01DF9 /* README.md in Sources */,
 				7931D9621D46F0C200D6CAAA /* WebViewController.swift in Sources */,
 				7982F3AD1D70439C00313038 /* BannerView.swift in Sources */,
 				79321E811D1D1F4200FAC209 /* split.c in Sources */,
 				7982F3971D6D742B00313038 /* ExtensionUIView.swift in Sources */,
+				1899B8132654A0BF004F1CD3 /* BaseViewController.swift in Sources */,
+				1899B8172654A0F3004F1CD3 /* BaseTabController.swift in Sources */,
 				79321E7B1D1D1F4200FAC209 /* bitstream.c in Sources */,
+				1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */,
 				79321E7A1D1D1F4200FAC209 /* GKHScanQCodeViewController.m in Sources */,
+				1835FBE526453245001B96D7 /* HBMultiTabView.swift in Sources */,
 				7982F3A61D6EC38400313038 /* MapServicePointAnnotationView.swift in Sources */,
 				184CF670263A9EFF0006D102 /* BaseModel.swift in Sources */,
+				1835FBE926453326001B96D7 /* HBMultiTabViewConfig.swift in Sources */,
 				79061CD21CF44297000BA6D7 /* HPToolLocation.swift in Sources */,
 				79729E721CCE17220025C7FA /* ViewController.swift in Sources */,
 				7982F3A81D6ECBBB00313038 /* MapServicePointAnnotation.swift in Sources */,

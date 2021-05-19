@@ -32,6 +32,16 @@ extension String {
         return Array(self.utf8)
     }
     
+    func substring(start: Int, length: Int) -> String {
+        if 0 > start || start >= count || 0 >= length {
+            return ""
+        }
+        
+        let indexStart = index(startIndex, offsetBy: start)
+        let indexEnd = index(startIndex, offsetBy: start + length)
+        return String(self[indexStart..<indexEnd])
+    }
+    
     func firstIndexOfCharacter(_ char: Character) -> Int? {
         if let index = self.firstIndex(of: char) {
             return self.distance(from: self.startIndex, to: index)
