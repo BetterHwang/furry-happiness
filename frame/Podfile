@@ -4,7 +4,7 @@ use_frameworks!
 target 'frame' do
     pod 'ObjectMapper'
     pod 'SwiftyJSON'
-#    pod 'Moya'
+    pod 'Masonry'
     pod 'Alamofire'
     pod 'CryptoSwift'
     pod 'SQLite.swift'
