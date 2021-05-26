@@ -8,18 +8,16 @@
 
 import Foundation
 
-protocol HBProgressViewDelegate: NSObjectProtocol {
-//    func progressView(progressView: HBProgressView, didChangedProgress progress: Int)
+protocol BaseProgressViewDelegate: NSObjectProtocol {
+    func progressView(progressView: BaseProgressView, didChangedProgress progress: Int)
 }
 
-protocol HBProgressProtocol {
+protocol HBProgressProtocol: NSObjectProtocol {
     
+    var progress: Int { get set }
 }
 
-
-typealias BlockChangeProgress = (_ view: HBProgressView, _ progress: Int) -> Void
-
-class HBProgressView: UIView {
+class BaseProgressView: UIView {
     
     // progress 0-100
     open var progress: Int = 0 {
@@ -27,12 +25,12 @@ class HBProgressView: UIView {
             if progress == value {
                 return
             }
-            progressDidChanged()
+            
+            reloadProgress(progress: value)
         }
     }
     
-    open weak var delegate: HBProgressViewDelegate?
-    open var blockChangeProgress: BlockChangeProgress?
+    open weak var delegate: BaseProgressViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,30 +40,20 @@ class HBProgressView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func progressDidChanged() {
+    private func reloadProgress(progress: Int) {
+        if 0 > progress {
+            self.progress = 0
+            return
+        }else if 100 < progress {
+            self.progress = 100
+            return
+        }
         
+        reloadView_Progress(progress: progress)
+        delegate?.progressView(progressView: self, didChangedProgress: progress)
     }
     
-    private func reloadView_Progress() {
+    func reloadView_Progress(progress: Int) {
         
-    }
-    
-    class func createProgressView(_ block: @escaping BlockChangeProgress) {
-        let className = NSStringFromClass(self.classForCoder())
-        print("\(className)")
-        
-//        self.classForCoder()
-    }
-}
-
-class HBCircleProgressView: HBProgressView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

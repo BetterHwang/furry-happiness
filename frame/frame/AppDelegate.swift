@@ -19,9 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置唤醒调用最小时间 后台运行
         application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
 //        let mapManager = BMKMapManager.sharedInstance()
-//        mapManager?.start("tVS5SjA2OCNrnTHLbLS17gXhHx5MaCdH", generalDelegate: nil)
+//        BMKBaseLog.setlogEnable(false, module: BMKMapModuleBasic)
+//        mapManager?.start("tVS5SjA2OCNrnTHLbLS17gXhHx5MaCdH", generalDelegate: self)
 //        Growing.start(withAccountId: "944396c52dd53e96")
 //        UIApplication.shared.windows.first{$0.isKeyWindow}?.rootViewController = UI
+        
+        HPLocationManager.sharedInstance.enableLocation()
         
         
         return true
@@ -70,4 +73,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        application.applicationIconBadgeNumber += 1
 //    }
 }
-

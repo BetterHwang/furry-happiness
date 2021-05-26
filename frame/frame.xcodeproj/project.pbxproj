@@ -27,6 +27,7 @@
 		184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1353263BED22000E8C2D /* BaseEntity.swift */; };
 		187978DB264BB1C400437E24 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187978DA264BB1C400437E24 /* BaseTableCell.swift */; };
 		187978E6264BE5C000437E24 /* HPSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187978E5264BE5C000437E24 /* HPSegment.swift */; };
+		187E442B2657AE3B000CFDF9 /* PHAsset+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E442A2657AE3B000CFDF9 /* PHAsset+ext.swift */; };
 		1894F5C5264399B100A68C37 /* YYAnimatedImageView+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894F5C4264399B100A68C37 /* YYAnimatedImageView+ext.m */; };
 		1894F5CC2643BBDB00A68C37 /* Util_Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894F5CB2643BBDB00A68C37 /* Util_Number.swift */; };
 		1899B8112654A0A8004F1CD3 /* BaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8102654A0A8004F1CD3 /* BaseTableController.swift */; };
@@ -42,17 +43,6 @@
 		792CDDF41CF69C8B0045F103 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792CDDF31CF69C8B0045F103 /* Foundation.framework */; };
 		7931D95F1D46F02A00D6CAAA /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7931D95E1D46F02A00D6CAAA /* WebView.storyboard */; };
 		7931D9621D46F0C200D6CAAA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7931D9611D46F0C200D6CAAA /* WebViewController.swift */; };
-		79321E7A1D1D1F4200FAC209 /* GKHScanQCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79321E651D1D1F4200FAC209 /* GKHScanQCodeViewController.m */; };
-		79321E7B1D1D1F4200FAC209 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 79321E671D1D1F4200FAC209 /* bitstream.c */; };
-		79321E7C1D1D1F4200FAC209 /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = 79321E691D1D1F4200FAC209 /* mask.c */; };
-		79321E7D1D1D1F4200FAC209 /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 79321E6B1D1D1F4200FAC209 /* qrencode.c */; };
-		79321E7E1D1D1F4200FAC209 /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = 79321E6D1D1D1F4200FAC209 /* qrinput.c */; };
-		79321E7F1D1D1F4200FAC209 /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = 79321E6F1D1D1F4200FAC209 /* qrspec.c */; };
-		79321E801D1D1F4200FAC209 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 79321E711D1D1F4200FAC209 /* rscode.c */; };
-		79321E811D1D1F4200FAC209 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 79321E731D1D1F4200FAC209 /* split.c */; };
-		79321E821D1D1F4200FAC209 /* QRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79321E751D1D1F4200FAC209 /* QRCode.bundle */; };
-		79321E831D1D1F4200FAC209 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79321E771D1D1F4200FAC209 /* QRCodeGenerator.m */; };
-		79321E841D1D1F4200FAC209 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79321E791D1D1F4200FAC209 /* QRCodeReaderView.m */; };
 		79729E701CCE17220025C7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79729E6F1CCE17220025C7FA /* AppDelegate.swift */; };
 		79729E721CCE17220025C7FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79729E711CCE17220025C7FA /* ViewController.swift */; };
 		79729E751CCE17220025C7FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79729E731CCE17220025C7FA /* Main.storyboard */; };
@@ -66,8 +56,6 @@
 		7982F3971D6D742B00313038 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982F3961D6D742B00313038 /* ExtensionUIView.swift */; };
 		7982F39A1D6D804F00313038 /* HorizontalThreeGradientIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982F3991D6D804F00313038 /* HorizontalThreeGradientIndicator.swift */; };
 		7982F39E1D6DABDE00313038 /* MapCenterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982F39D1D6DABDE00313038 /* MapCenterAnnotationView.swift */; };
-		7982F3A61D6EC38400313038 /* MapServicePointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982F3A51D6EC38400313038 /* MapServicePointAnnotationView.swift */; };
-		7982F3A81D6ECBBB00313038 /* MapServicePointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982F3A71D6ECBBB00313038 /* MapServicePointAnnotation.swift */; };
 		7982F3AA1D70149E00313038 /* HPWebImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982F3A91D70149E00313038 /* HPWebImageManager.swift */; };
 		7982F3AD1D70439C00313038 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7982F3AC1D70439C00313038 /* BannerView.swift */; };
 		798782921DF10C3F005C76A8 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798782911DF10C3F005C76A8 /* ActivityViewController.swift */; };
@@ -143,6 +131,7 @@
 		184F1353263BED22000E8C2D /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		187978DA264BB1C400437E24 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		187978E5264BE5C000437E24 /* HPSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPSegment.swift; sourceTree = "<group>"; };
+		187E442A2657AE3B000CFDF9 /* PHAsset+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+ext.swift"; sourceTree = "<group>"; };
 		1894F5C3264399B100A68C37 /* YYAnimatedImageView+ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYAnimatedImageView+ext.h"; sourceTree = "<group>"; };
 		1894F5C4264399B100A68C37 /* YYAnimatedImageView+ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YYAnimatedImageView+ext.m"; sourceTree = "<group>"; };
 		1894F5CB2643BBDB00A68C37 /* Util_Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util_Number.swift; sourceTree = "<group>"; };
@@ -160,27 +149,6 @@
 		7931D95E1D46F02A00D6CAAA /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		7931D9611D46F0C200D6CAAA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7931D9641D47473E00D6CAAA /* frame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = frame.entitlements; sourceTree = "<group>"; };
-		79321E641D1D1F4200FAC209 /* GKHScanQCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKHScanQCodeViewController.h; sourceTree = "<group>"; };
-		79321E651D1D1F4200FAC209 /* GKHScanQCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHScanQCodeViewController.m; sourceTree = "<group>"; };
-		79321E671D1D1F4200FAC209 /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
-		79321E681D1D1F4200FAC209 /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
-		79321E691D1D1F4200FAC209 /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
-		79321E6A1D1D1F4200FAC209 /* mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mask.h; sourceTree = "<group>"; };
-		79321E6B1D1D1F4200FAC209 /* qrencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrencode.c; sourceTree = "<group>"; };
-		79321E6C1D1D1F4200FAC209 /* qrencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode.h; sourceTree = "<group>"; };
-		79321E6D1D1D1F4200FAC209 /* qrinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrinput.c; sourceTree = "<group>"; };
-		79321E6E1D1D1F4200FAC209 /* qrinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrinput.h; sourceTree = "<group>"; };
-		79321E6F1D1D1F4200FAC209 /* qrspec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrspec.c; sourceTree = "<group>"; };
-		79321E701D1D1F4200FAC209 /* qrspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrspec.h; sourceTree = "<group>"; };
-		79321E711D1D1F4200FAC209 /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
-		79321E721D1D1F4200FAC209 /* rscode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rscode.h; sourceTree = "<group>"; };
-		79321E731D1D1F4200FAC209 /* split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = split.c; sourceTree = "<group>"; };
-		79321E741D1D1F4200FAC209 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
-		79321E751D1D1F4200FAC209 /* QRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QRCode.bundle; sourceTree = "<group>"; };
-		79321E761D1D1F4200FAC209 /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
-		79321E771D1D1F4200FAC209 /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
-		79321E781D1D1F4200FAC209 /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
-		79321E791D1D1F4200FAC209 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
 		79729E6C1CCE17220025C7FA /* frame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79729E6F1CCE17220025C7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79729E711CCE17220025C7FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,8 +169,6 @@
 		7982F3961D6D742B00313038 /* ExtensionUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		7982F3991D6D804F00313038 /* HorizontalThreeGradientIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalThreeGradientIndicator.swift; sourceTree = "<group>"; };
 		7982F39D1D6DABDE00313038 /* MapCenterAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCenterAnnotationView.swift; sourceTree = "<group>"; };
-		7982F3A51D6EC38400313038 /* MapServicePointAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapServicePointAnnotationView.swift; sourceTree = "<group>"; };
-		7982F3A71D6ECBBB00313038 /* MapServicePointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapServicePointAnnotation.swift; sourceTree = "<group>"; };
 		7982F3A91D70149E00313038 /* HPWebImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPWebImageManager.swift; sourceTree = "<group>"; };
 		7982F3AC1D70439C00313038 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		798782911DF10C3F005C76A8 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -420,42 +386,6 @@
 			path = UIModule;
 			sourceTree = "<group>";
 		};
-		79321E631D1D1F4200FAC209 /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				79321E641D1D1F4200FAC209 /* GKHScanQCodeViewController.h */,
-				79321E651D1D1F4200FAC209 /* GKHScanQCodeViewController.m */,
-				79321E661D1D1F4200FAC209 /* libqrencode */,
-				79321E751D1D1F4200FAC209 /* QRCode.bundle */,
-				79321E761D1D1F4200FAC209 /* QRCodeGenerator.h */,
-				79321E771D1D1F4200FAC209 /* QRCodeGenerator.m */,
-				79321E781D1D1F4200FAC209 /* QRCodeReaderView.h */,
-				79321E791D1D1F4200FAC209 /* QRCodeReaderView.m */,
-			);
-			path = QRCode;
-			sourceTree = "<group>";
-		};
-		79321E661D1D1F4200FAC209 /* libqrencode */ = {
-			isa = PBXGroup;
-			children = (
-				79321E671D1D1F4200FAC209 /* bitstream.c */,
-				79321E681D1D1F4200FAC209 /* bitstream.h */,
-				79321E691D1D1F4200FAC209 /* mask.c */,
-				79321E6A1D1D1F4200FAC209 /* mask.h */,
-				79321E6B1D1D1F4200FAC209 /* qrencode.c */,
-				79321E6C1D1D1F4200FAC209 /* qrencode.h */,
-				79321E6D1D1D1F4200FAC209 /* qrinput.c */,
-				79321E6E1D1D1F4200FAC209 /* qrinput.h */,
-				79321E6F1D1D1F4200FAC209 /* qrspec.c */,
-				79321E701D1D1F4200FAC209 /* qrspec.h */,
-				79321E711D1D1F4200FAC209 /* rscode.c */,
-				79321E721D1D1F4200FAC209 /* rscode.h */,
-				79321E731D1D1F4200FAC209 /* split.c */,
-				79321E741D1D1F4200FAC209 /* split.h */,
-			);
-			path = libqrencode;
-			sourceTree = "<group>";
-		};
 		79729E631CCE17220025C7FA = {
 			isa = PBXGroup;
 			children = (
@@ -463,7 +393,6 @@
 				1894F5CA2643BB7400A68C37 /* Utils */,
 				798782901DF10C20005C76A8 /* Activity */,
 				79DB864C1D5D983900DFB4EC /* Mixcom */,
-				79321E631D1D1F4200FAC209 /* QRCode */,
 				79B1549C1D016E2200949E6A /* Network */,
 				79B154991D0167A400949E6A /* DeviceInfo */,
 				792CDDED1CF699D90045F103 /* GrowingIO */,
@@ -550,8 +479,6 @@
 			isa = PBXGroup;
 			children = (
 				7982F39D1D6DABDE00313038 /* MapCenterAnnotationView.swift */,
-				7982F3A51D6EC38400313038 /* MapServicePointAnnotationView.swift */,
-				7982F3A71D6ECBBB00313038 /* MapServicePointAnnotation.swift */,
 			);
 			path = MapSubView;
 			sourceTree = "<group>";
@@ -598,6 +525,7 @@
 				7982F3921D6D725D00313038 /* ExtensionUIApplication.swift */,
 				7982F3961D6D742B00313038 /* ExtensionUIView.swift */,
 				7982F3941D6D740C00313038 /* ExtensionUIViewController.swift */,
+				187E442A2657AE3B000CFDF9 /* PHAsset+ext.swift */,
 			);
 			path = TypeExtensions;
 			sourceTree = "<group>";
@@ -642,7 +570,6 @@
 				79729E691CCE17220025C7FA /* Frameworks */,
 				793AD9B91E309A7200649814 /* Embed Frameworks */,
 				76E35E63DACA4CAB4BF62C43 /* [CP] Embed Pods Frameworks */,
-				26B64661BC3FC85C9D14D953 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -752,7 +679,6 @@
 			files = (
 				79729E7A1CCE17220025C7FA /* LaunchScreen.storyboard in Resources */,
 				79729E771CCE17220025C7FA /* Assets.xcassets in Resources */,
-				79321E821D1D1F4200FAC209 /* QRCode.bundle in Resources */,
 				798782941DF10C65005C76A8 /* Activity.storyboard in Resources */,
 				7931D95F1D46F02A00D6CAAA /* WebView.storyboard in Resources */,
 				79729E751CCE17220025C7FA /* Main.storyboard in Resources */,
@@ -776,24 +702,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		26B64661BC3FC85C9D14D953 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-resources.sh",
-				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		76E35E63DACA4CAB4BF62C43 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -808,6 +716,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEventBus/SwiftEventBus.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YBImageBrowser/YBImageBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
@@ -821,6 +730,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEventBus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBImageBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
@@ -860,16 +770,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7998F6351D3C9165007F6A01 /* ExtensionDouble.swift in Sources */,
-				79321E7C1D1D1F4200FAC209 /* mask.c in Sources */,
 				184F1326263B94F2000E8C2D /* HBProgressView.swift in Sources */,
 				1894F5C5264399B100A68C37 /* YYAnimatedImageView+ext.m in Sources */,
 				798782921DF10C3F005C76A8 /* ActivityViewController.swift in Sources */,
 				184CF674263AA6B90006D102 /* AppConstants.swift in Sources */,
-				79321E7E1D1D1F4200FAC209 /* qrinput.c in Sources */,
 				1894F5CC2643BBDB00A68C37 /* Util_Number.swift in Sources */,
 				1899B8152654A0D4004F1CD3 /* BaseNavigationController.swift in Sources */,
 				79B1549B1D0167BA00949E6A /* HPDeviceInfo.swift in Sources */,
-				79321E801D1D1F4200FAC209 /* rscode.c in Sources */,
 				7998F6371D3C9172007F6A01 /* ExtensionBool.swift in Sources */,
 				184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */,
 				1899B81A2654AD21004F1CD3 /* BaseViewModel.swift in Sources */,
@@ -878,7 +785,6 @@
 				7982F39A1D6D804F00313038 /* HorizontalThreeGradientIndicator.swift in Sources */,
 				7998F6311D3C90FF007F6A01 /* ExtensionInt.swift in Sources */,
 				7998F63B1D3CAF9F007F6A01 /* HPTextViewWithLimitedLength.swift in Sources */,
-				79321E7D1D1D1F4200FAC209 /* qrencode.c in Sources */,
 				79DB864E1D5D9B1700DFB4EC /* MCEntity.swift in Sources */,
 				1899B8112654A0A8004F1CD3 /* BaseTableController.swift in Sources */,
 				798D85DB1D659EC700EF8B21 /* HPPageViewController.swift in Sources */,
@@ -891,7 +797,6 @@
 				1835FBE026451B6E001B96D7 /* HBCommonTabItemCell.swift in Sources */,
 				79DB86501D5DA13300DFB4EC /* EncryptUtils.swift in Sources */,
 				79B1549E1D016E3A00949E6A /* HPNetworkManager.swift in Sources */,
-				79321E7F1D1D1F4200FAC209 /* qrspec.c in Sources */,
 				79B154A11D016FC600949E6A /* Reachability.m in Sources */,
 				7998F6261D3C87C2007F6A01 /* HPTextView.swift in Sources */,
 				7982F3AA1D70149E00313038 /* HPWebImageManager.swift in Sources */,
@@ -901,26 +806,20 @@
 				79E931F51CFD37A600C01DF9 /* README.md in Sources */,
 				7931D9621D46F0C200D6CAAA /* WebViewController.swift in Sources */,
 				7982F3AD1D70439C00313038 /* BannerView.swift in Sources */,
-				79321E811D1D1F4200FAC209 /* split.c in Sources */,
 				7982F3971D6D742B00313038 /* ExtensionUIView.swift in Sources */,
 				1899B8132654A0BF004F1CD3 /* BaseViewController.swift in Sources */,
 				1899B8172654A0F3004F1CD3 /* BaseTabController.swift in Sources */,
-				79321E7B1D1D1F4200FAC209 /* bitstream.c in Sources */,
 				1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */,
-				79321E7A1D1D1F4200FAC209 /* GKHScanQCodeViewController.m in Sources */,
 				1835FBE526453245001B96D7 /* HBMultiTabView.swift in Sources */,
-				7982F3A61D6EC38400313038 /* MapServicePointAnnotationView.swift in Sources */,
 				184CF670263A9EFF0006D102 /* BaseModel.swift in Sources */,
 				1835FBE926453326001B96D7 /* HBMultiTabViewConfig.swift in Sources */,
 				79061CD21CF44297000BA6D7 /* HPToolLocation.swift in Sources */,
 				79729E721CCE17220025C7FA /* ViewController.swift in Sources */,
-				7982F3A81D6ECBBB00313038 /* MapServicePointAnnotation.swift in Sources */,
-				79321E841D1D1F4200FAC209 /* QRCodeReaderView.m in Sources */,
+				187E442B2657AE3B000CFDF9 /* PHAsset+ext.swift in Sources */,
 				184F1350263BEA45000E8C2D /* HBLoadingView.swift in Sources */,
 				184CF66C263A9EF30006D102 /* BaseRequest.swift in Sources */,
 				7982F3931D6D725D00313038 /* ExtensionUIApplication.swift in Sources */,
 				79729E701CCE17220025C7FA /* AppDelegate.swift in Sources */,
-				79321E831D1D1F4200FAC209 /* QRCodeGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,7 +922,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1073,7 +972,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1094,7 +993,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = frame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1123,7 +1022,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = frame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

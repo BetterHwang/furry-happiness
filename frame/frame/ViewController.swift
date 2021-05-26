@@ -8,8 +8,9 @@
 
 import UIKit
 import PassKit
+import SwiftQRCode
 
-class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDelegate, BMKMapViewDelegate {
+class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
     @IBOutlet weak var viewMapParent: UIView!
     @IBOutlet weak var imageViewQrCode: UIImageView!
     @IBOutlet weak var textfieldAparty: UITextField!
@@ -17,12 +18,10 @@ class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDele
     @IBOutlet weak var textfieldVirtualMobile: UITextField!
 
     var indicator: MapCenterAnnotationView?
-    var viewBaiduMap: BMKMapView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        imageViewQrCode.image = QRCodeGenerator.qrImageForString("http://www.baidu.com/", imageSize: 80)
 
 
     }
@@ -34,48 +33,18 @@ class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDele
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-//        mapCreate()
-//        viewBaiduMap?.viewWillAppear()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        imageViewQrCode.image = QRCode.generateImage("https://blog.csdn.net/weixin_33835690/article/details/91465632", avatarImage: UIImage(named: ""), avatarScale: 0.3)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-//        viewBaiduMap?.viewWillDisappear()
-//        mapDestory()
-
-    }
-
-    func mapCreate() {
-
-        //初始化地图
-        viewBaiduMap = BMKMapView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 109))
-        viewBaiduMap?.mapType = BMKMapType.standard
-        viewBaiduMap?.showMapScaleBar = true
-        viewBaiduMap?.mapScaleBarPosition = CGPoint(x: 55, y: UIScreen.main.bounds.height - 64 - 88)
-        viewBaiduMap?.isSelectedAnnotationViewFront = true
-        viewBaiduMap?.userTrackingMode = BMKUserTrackingModeNone
-        let param = BMKLocationViewDisplayParam()
-        param.isAccuracyCircleShow = false
-        viewBaiduMap?.updateLocationView(with: param)
-        viewBaiduMap?.showsUserLocation = true
-        viewBaiduMap?.zoomLevel = Float(17)
-
-        if nil != viewBaiduMap {
-            viewMapParent?.addSubview(viewBaiduMap!)
-        }
-
-        viewBaiduMap?.delegate = self
-        //添加百度定位监听
-    }
-
-    func mapDestory() {
-
-        //删除百度定位监听
-        viewBaiduMap?.delegate = nil
-        viewBaiduMap?.removeFromSuperview()
-        viewBaiduMap = nil
     }
 
     override func viewDidLayoutSubviews() {
@@ -92,6 +61,10 @@ class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDele
 //        HPLocationManager.sharedInstance.startLocation(.Always)
 
         NSLog("\(HPNetworkManager.sharedInstance.getNetworkLevel())")
+        
+        let vc = UIViewController.init()
+        vc.title = "XXXXX"
+        UIApplication.topViewController()?.navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func onBtnClickApplePay(_ sender: AnyObject) {
@@ -174,14 +147,8 @@ class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDele
 
     @IBAction func onBtnClickAddAnnotation(_ sender: AnyObject) {
 
-        let annotation = BMKPAnnotationBase()
-        annotation.title = "实施"
-        annotation.subtitle = "(1)"
-        annotation.coordinate = viewBaiduMap!.centerCoordinate
-        viewBaiduMap?.addAnnotation(annotation)
     }
     @IBAction func onBtnClickRemoveAnnotation(_ sender: AnyObject) {
-        viewBaiduMap?.removeAnnotations(viewBaiduMap?.annotations)
     }
 
     @IBAction func onBtnClickPresent(_ sender: AnyObject) {
@@ -193,33 +160,5 @@ class ViewController: UIViewController, PKPaymentAuthorizationViewControllerDele
         HBLoadingView.show()
     }
     
-    //地图返回
-    func mapView(_ mapView: BMKMapView!, viewFor annotation: BMKAnnotation!) -> BMKAnnotationView! {
-        if nil != annotation && annotation.isKind(of: BMKPAnnotationBase.classForCoder()) {
-
-            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "MapServicePointAnnotationView") as? MapServicePointAnnotationView
-
-            if nil == annotationView {
-                annotationView = MapServicePointAnnotationView(annotation: annotation as! BMKPAnnotationBase, identifier: "MapServicePointAnnotationView")
-            }
-
-            //            let annotationView = ServicePointAnnotationView()
-            annotationView?.annotationServicePoint =  annotation as? BMKPAnnotationBase
-            return annotationView
-
-        }
-
-        return nil
-    }
-
-    func mapView(_ mapView: BMKMapView!, didSelect view: BMKAnnotationView!) {
-        let annotations = mapView.annotations
-
-        for itemAnnotation in annotations! {
-            if let annotationView = mapView.view(for: itemAnnotation as! BMKAnnotation) as? MapServicePointAnnotationView {
-                annotationView.showBadge(8)
-            }
-        }
-    }
 }
 
