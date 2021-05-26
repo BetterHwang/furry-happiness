@@ -1,20 +1,5 @@
 PODS:
   - Alamofire (4.9.1)
-  - BaiduMapKit (6.2.0):
-    - BaiduMapKit/Base (= 6.2.0)
-    - BaiduMapKit/Cloud (= 6.2.0)
-    - BaiduMapKit/Map (= 6.2.0)
-    - BaiduMapKit/Search (= 6.2.0)
-    - BaiduMapKit/Utils (= 6.2.0)
-  - BaiduMapKit/Base (6.2.0)
-  - BaiduMapKit/Cloud (6.2.0):
-    - BaiduMapKit/Base
-  - BaiduMapKit/Map (6.2.0):
-    - BaiduMapKit/Base
-  - BaiduMapKit/Search (6.2.0):
-    - BaiduMapKit/Base
-  - BaiduMapKit/Utils (6.2.0):
-    - BaiduMapKit/Base
   - CryptoSwift (1.4.0)
   - Masonry (1.1.0)
   - ObjectMapper (4.2.0)
@@ -25,6 +10,7 @@ PODS:
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
   - SwiftEventBus (5.0.0)
+  - SwiftQRCode (3.0.2)
   - SwiftyJSON (5.0.1)
   - YBImageBrowser (3.0.9):
     - YBImageBrowser/Core (= 3.0.9)
@@ -37,42 +23,42 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - BaiduMapKit
   - CryptoSwift
   - Masonry
   - ObjectMapper
   - SQLite.swift
   - SwiftEventBus
+  - SwiftQRCode
   - SwiftyJSON
   - YBImageBrowser
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - BaiduMapKit
     - CryptoSwift
     - Masonry
     - ObjectMapper
     - SDWebImage
     - SQLite.swift
     - SwiftEventBus
+    - SwiftQRCode
     - SwiftyJSON
     - YBImageBrowser
     - YYImage
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  BaiduMapKit: 907c6d9b74f66c3ff4741fc4b568ae0b339917f8
   CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
+  SwiftQRCode: 280589699d84195c2c573011aa52f2c015c31c34
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: eaa15ecf166ca08ed93f278a5e6659cb9702b6a4
+PODFILE CHECKSUM: c048cd6235b5d657fe6f51014902b89c6101dfb6
 
 COCOAPODS: 1.10.1

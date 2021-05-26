@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import WebKit
 
-class WebViewController: UIViewController, UIWebViewDelegate {
-    @IBOutlet weak var webViewContent: UIWebView!
+class WebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+    @IBOutlet weak var webViewContent: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         let request = URLRequest(url: URL(string: "http://www.baidu.com/")!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        webViewContent.loadRequest(request)
+        webViewContent.load(request)
         
-        webViewContent.delegate = self
+        webViewContent.uiDelegate = self
+        webViewContent.navigationDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,21 +39,37 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     }
     */
 
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        //获取所有的HTML
-//        let allHtml = "document.documentElement.innerHTML"
-//        let allHtmlInfo = webView.stringByEvaluatingJavaScriptFromString(allHtml)
-//        NSLog("\(allHtmlInfo)")
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
         //获取HTML标题
         let htmlTitle = "document.title"
-        let htmlTitleInfo = webView.stringByEvaluatingJavaScript(from: htmlTitle)
-        NSLog("\(htmlTitleInfo)")
-        self.title = htmlTitleInfo
         
-        //获取网页的某个值
-        let htmlNum = "document.getElementById('kw').innerText"
-        let htmlNumInfo = webView.stringByEvaluatingJavaScript(from: htmlNum)
-        NSLog("\(htmlNumInfo)")
+        webView.evaluateJavaScript(htmlTitle) { [weak self] data, error in
+            guard let titlePage = data as? String else {
+                return
+            }
+            
+            self?.title = titlePage
+        }
+//        //获取网页的某个值
+//        let htmlNum = "document.getElementById('kw').innerText"
+//        let htmlNumInfo = webView.stringByEvaluatingJavaScript(from: htmlNum)
+//        NSLog("\(htmlNumInfo)")
+    }
+    
+    func webViewDidClose(_ webView: WKWebView) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        
     }
 }

@@ -19,6 +19,13 @@ import MapKit
     @objc optional func locationManagerWillEnterForeGround()
 }
 
+class Weak<T: NSObjectProtocol> {
+    weak var value: T?
+    init(value: T) {
+        self.value = value
+    }
+}
+
 @objc enum LocationStyle: Int {
     case always
     case inUsage
@@ -38,7 +45,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
     fileprivate var _callbackCloseLocation: (() -> Void)?
     fileprivate var _currentLocation: CLLocationCoordinate2D = defaultLocation
     
-    fileprivate var listDelegate = [HPLocationManagerDelegate]()
+    fileprivate var listDelegate = [Weak<HPLocationManagerDelegate>]()
     
     fileprivate override init() {
         super.init()
@@ -65,14 +72,14 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
     @objc func appDidEnterBackground(_ notice: Notification) {
         //已经进入后台协议
         for delegateItem in listDelegate {
-            delegateItem.locationManagerDidEnterBackGround?()
+            delegateItem.value?.locationManagerDidEnterBackGround?()
         }
     }
     
     @objc func appWillEnterForeground(_ notice: Notification) {
         //进入前台前调用协议
         for delegateItem in listDelegate {
-            delegateItem.locationManagerWillEnterForeGround?()
+            delegateItem.value?.locationManagerWillEnterForeGround?()
         }
     }
     
@@ -119,7 +126,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
             
             //即将开启定位协议
             for delegateItem in listDelegate {
-                delegateItem.locationManagerWillStartLocation?(.always)
+                delegateItem.value?.locationManagerWillStartLocation?(.always)
             }
             break
         case .inUsage:
@@ -134,7 +141,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
             
             //即将开启定位协议
             for delegateItem in listDelegate {
-                delegateItem.locationManagerWillStartLocation?(.inUsage)
+                delegateItem.value?.locationManagerWillStartLocation?(.inUsage)
             }
             break
         }
@@ -149,40 +156,24 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
         
         //已经关闭定位协议
         for delegateItem in listDelegate {
-            delegateItem.locationManagerDidStopLocation?()
+            delegateItem.value?.locationManagerDidStopLocation?()
         }
     }
     
     func addDelegate(_ delegate: HPLocationManagerDelegate) {
-        var markHasDelegate: Bool = false
-        for delegateItem in listDelegate {
-            if delegateItem === delegate {
-                markHasDelegate = true
-                break
-            }
+        // 判断是否已存在
+        let index = listDelegate.firstIndex {
+            nil != $0.value && $0.value!.isEqual(delegate)
         }
         
-        //若未有 则添加
-        if !markHasDelegate {
-            listDelegate.append(delegate)
+        if nil == index {
+            listDelegate.append(Weak<HPLocationManagerDelegate>.init(value: delegate))
         }
     }
     
     func removeDelegate(_ delegate: HPLocationManagerDelegate) {
-        var markHasDelegate: Bool = false
-        var index: Int = 0
-        for delegateItem in listDelegate {
-            if delegateItem === delegate {
-                markHasDelegate = true
-                break
-            }
-            
-            index += 1
-        }
-        
-        //若已有 则删除
-        if markHasDelegate {
-            listDelegate.remove(at: index)
+        listDelegate.removeAll {
+            nil != $0.value && $0.value!.isEqual(delegate)
         }
     }
     
@@ -214,8 +205,19 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     //定位功能状态改变
-    @objc internal  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    @objc internal func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .denied {
+            
+        }
         NSLog("CLAuthorizationStatus: \(status.rawValue)")
+    }
+    
+    @available(iOS 14.0, *)
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .denied {
+            
+        }
+        NSLog("CLAuthorizationStatus: \(manager.authorizationStatus.rawValue)")
     }
     
     @objc internal func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
@@ -225,7 +227,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
     @objc internal func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if 0 >= locations.count {
             for delegateItem in listDelegate {
-                delegateItem.locationManagerDidUpdateLocationGPS?(nil, placeMark: nil)
+                delegateItem.value?.locationManagerDidUpdateLocationGPS?(nil, placeMark: nil)
             }
             return
         }
@@ -237,7 +239,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
             if nil != error {
                 NSLog("\(error?.localizedDescription ?? "")")
                 for delegateItem in self.listDelegate {
-                    delegateItem.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: nil)
+                    delegateItem.value?.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: nil)
                 }
                 return
             }
@@ -245,7 +247,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
             //信息为空 返回
             if nil == listMark || 0 >= listMark!.count {
                 for delegateItem in self.listDelegate {
-                    delegateItem.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: nil)
+                    delegateItem.value?.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: nil)
                 }
                 return
             }
@@ -254,7 +256,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
             
             //定位成功返回坐标点及Geo地址信息
             for delegateItem in self.listDelegate {
-                delegateItem.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: placeMark)
+                delegateItem.value?.locationManagerDidUpdateLocationGPS?(locations[0], placeMark: placeMark)
             }
         }
     }
@@ -266,7 +268,7 @@ class HPLocationManager: NSObject, CLLocationManagerDelegate {
         
         //定位失败协议
         for delegateItem in listDelegate {
-            delegateItem.locationManagerUpdateLocationError?(error as NSError?)
+            delegateItem.value?.locationManagerUpdateLocationError?(error as NSError?)
         }
     }
 }
