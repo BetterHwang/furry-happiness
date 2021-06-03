@@ -50,7 +50,9 @@
 	<string>亲，为了您更加快捷的叫到服务，请打开定位。</string>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>audio</string>
 		<string>location</string>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

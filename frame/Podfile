@@ -13,4 +13,13 @@ target 'frame' do
     pod 'YBImageBrowser'
     pod 'Masonry'
     pod 'SwiftQRCode'
+    
+    pod "SDWebImage"
+    
+    #播放器控制界面
+    pod 'ZFPlayer/ControlView'
+    
+    #腾讯直播
+    pod "TXLiteAVSDK_TRTC"
+    pod 'TXIMSDK_TUIKit_iOS'#, '~> 5.1.60'
 end

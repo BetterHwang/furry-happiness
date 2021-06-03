@@ -35,6 +35,7 @@
 		1899B8152654A0D4004F1CD3 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8142654A0D3004F1CD3 /* BaseNavigationController.swift */; };
 		1899B8172654A0F3004F1CD3 /* BaseTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8162654A0F3004F1CD3 /* BaseTabController.swift */; };
 		1899B81A2654AD21004F1CD3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8192654AD21004F1CD3 /* BaseViewModel.swift */; };
+		18D5982126663F300083C9E4 /* HPPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5982026663F300083C9E4 /* HPPlayerViewController.swift */; };
 		18EB0D37263A6E76003C04BE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */; };
 		7613DD9125A039F1C419461A /* Pods_frame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD804E60DBDFCD0286E442AB /* Pods_frame.framework */; };
 		79061CD21CF44297000BA6D7 /* HPToolLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79061CD11CF44297000BA6D7 /* HPToolLocation.swift */; };
@@ -140,6 +141,7 @@
 		1899B8142654A0D3004F1CD3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		1899B8162654A0F3004F1CD3 /* BaseTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabController.swift; sourceTree = "<group>"; };
 		1899B8192654AD21004F1CD3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		18D5982026663F300083C9E4 /* HPPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPPlayerViewController.swift; sourceTree = "<group>"; };
 		18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		79061CD11CF44297000BA6D7 /* HPToolLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPToolLocation.swift; sourceTree = "<group>"; };
 		792CDDEE1CF699D90045F103 /* Growing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Growing.h; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				798D85DA1D659EC700EF8B21 /* HPPageViewController.swift */,
 				7982F3A91D70149E00313038 /* HPWebImageManager.swift */,
 				187978E5264BE5C000437E24 /* HPSegment.swift */,
+				18D5982026663F300083C9E4 /* HPPlayerViewController.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				79729E691CCE17220025C7FA /* Frameworks */,
 				793AD9B91E309A7200649814 /* Embed Frameworks */,
 				76E35E63DACA4CAB4BF62C43 /* [CP] Embed Pods Frameworks */,
+				586F15D133BF7D430D158393 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -628,7 +632,7 @@
 				TargetAttributes = {
 					79729E6B1CCE17220025C7FA = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 38B3C86ATY;
+						DevelopmentTeam = 7G3NS22V5M;
 						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -702,6 +706,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		586F15D133BF7D430D158393 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-resources.sh",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		76E35E63DACA4CAB4BF62C43 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,13 +733,19 @@
 				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ISVImageScrollView/ISVImageScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/MMLayout/MMLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEventBus/SwiftEventBus.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TXIMSDK_TUIKit_iOS/TXIMSDK_TUIKit_iOS.framework",
+				"${PODS_ROOT}/TXIMSDK_iOS/ImSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/YBImageBrowser/YBImageBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 			);
@@ -725,13 +753,19 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISVImageScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEventBus.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TXIMSDK_TUIKit_iOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBImageBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 			);
@@ -796,6 +830,7 @@
 				1835FBD7264516AC001B96D7 /* HBMultiTabChildController.swift in Sources */,
 				1835FBE026451B6E001B96D7 /* HBCommonTabItemCell.swift in Sources */,
 				79DB86501D5DA13300DFB4EC /* EncryptUtils.swift in Sources */,
+				18D5982126663F300083C9E4 /* HPPlayerViewController.swift in Sources */,
 				79B1549E1D016E3A00949E6A /* HPNetworkManager.swift in Sources */,
 				79B154A11D016FC600949E6A /* Reachability.m in Sources */,
 				7998F6261D3C87C2007F6A01 /* HPTextView.swift in Sources */,
@@ -989,7 +1024,7 @@
 				CODE_SIGN_ENTITLEMENTS = frame/frame.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 38B3C86ATY;
+				DEVELOPMENT_TEAM = 7G3NS22V5M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = frame/Info.plist;
@@ -1001,7 +1036,7 @@
 					"$(PROJECT_DIR)/ThirdPart",
 				);
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = com.happiness.frame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iartschool.scene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "frame-Bridging-Header.h";
@@ -1018,7 +1053,7 @@
 				CODE_SIGN_ENTITLEMENTS = frame/frame.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 38B3C86ATY;
+				DEVELOPMENT_TEAM = 7G3NS22V5M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = frame/Info.plist;
@@ -1030,7 +1065,7 @@
 					"$(PROJECT_DIR)/ThirdPart",
 				);
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = com.happiness.frame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iartschool.scene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "frame-Bridging-Header.h";
