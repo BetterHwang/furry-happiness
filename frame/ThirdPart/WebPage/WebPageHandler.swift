@@ -70,25 +70,25 @@ class WebPageHandler: NSObject {
     }
 }
 
-extension WebPageHandler: WKNavigationDelegate {
-    
-    func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        if(challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust && challenge.previousFailureCount == 0) {
-            
-            let credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-            completionHandler(URLSession.AuthChallengeDisposition.useCredential,credential)
-        }else {
-            completionHandler(URLSession.AuthChallengeDisposition.useCredential,nil)
-        }
-    }
-    
-    
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
-        decisionHandler(.allow);
-    }
-    
-}
+//extension WebPageHandler: WKNavigationDelegate {
+//    
+//    func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+//        if(challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust && challenge.previousFailureCount == 0) {
+//            
+//            let credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+//            completionHandler(URLSession.AuthChallengeDisposition.useCredential,credential)
+//        }else {
+//            completionHandler(URLSession.AuthChallengeDisposition.useCredential,nil)
+//        }
+//    }
+//    
+//    
+//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+//        
+//        decisionHandler(.allow);
+//    }
+//    
+//}
 
 //extension WebPageHandler: WKScriptMessageHandler {
 //    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
