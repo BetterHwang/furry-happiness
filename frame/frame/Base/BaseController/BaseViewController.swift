@@ -58,7 +58,7 @@ class BaseViewController: UIViewController {
         
     }
     
-    func onLoadDataFinished() {
+    func onLoadDataFinished(succeed: Bool) {
         
     }
 }

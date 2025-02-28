@@ -53,6 +53,13 @@ class BaseModelTableViewController<T: BaseModel, C: BaseModelTableCell<T>>: Base
         })
     }
     
+    override func onLoadDataFinished(succeed: Bool) {
+        if succeed {
+            self.pageIndex += 1
+        }
+        
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

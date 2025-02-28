@@ -16,6 +16,7 @@
 		0AEBDA0C2D718B8B00268C7B /* LineProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA0B2D718B8B00268C7B /* LineProgressView.swift */; };
 		0AEBDA0E2D7195F700268C7B /* BaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA0D2D7195F700268C7B /* BaseNavigationView.swift */; };
 		0AEBDA102D71985300268C7B /* BaseModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA0F2D71985300268C7B /* BaseModelTableViewController.swift */; };
+		0AEBDA122D71DCC200268C7B /* BaseStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA112D71DCC200268C7B /* BaseStackViewController.swift */; };
 		1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD02645162C001B96D7 /* HBMultiTabController.swift */; };
 		1835FBD7264516AC001B96D7 /* HBMultiTabChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD6264516AC001B96D7 /* HBMultiTabChildController.swift */; };
 		1835FBDC264519FD001B96D7 /* HBCommonTabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBDB264519FD001B96D7 /* HBCommonTabScrollView.swift */; };
@@ -122,6 +123,7 @@
 		0AEBDA0B2D718B8B00268C7B /* LineProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineProgressView.swift; sourceTree = "<group>"; };
 		0AEBDA0D2D7195F700268C7B /* BaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationView.swift; sourceTree = "<group>"; };
 		0AEBDA0F2D71985300268C7B /* BaseModelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelTableViewController.swift; sourceTree = "<group>"; };
+		0AEBDA112D71DCC200268C7B /* BaseStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStackViewController.swift; sourceTree = "<group>"; };
 		1103F3046AAB3D002A157274 /* libPods-frame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-frame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1490EA1C2F22499545001CA8 /* Pods-frame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frame.debug.xcconfig"; path = "Target Support Files/Pods-frame/Pods-frame.debug.xcconfig"; sourceTree = "<group>"; };
 		1835FBD02645162C001B96D7 /* HBMultiTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabController.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				1899B8162654A0F3004F1CD3 /* BaseTabController.swift */,
 				0AEBDA092D718AFD00268C7B /* BaseWebViewController.swift */,
 				0AEBDA0F2D71985300268C7B /* BaseModelTableViewController.swift */,
+				0AEBDA112D71DCC200268C7B /* BaseStackViewController.swift */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				1899B8132654A0BF004F1CD3 /* BaseViewController.swift in Sources */,
 				1899B8172654A0F3004F1CD3 /* BaseTabController.swift in Sources */,
 				1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */,
+				0AEBDA122D71DCC200268C7B /* BaseStackViewController.swift in Sources */,
 				1835FBE526453245001B96D7 /* HBMultiTabView.swift in Sources */,
 				0AEBDA102D71985300268C7B /* BaseModelTableViewController.swift in Sources */,
 				184CF670263A9EFF0006D102 /* BaseModel.swift in Sources */,
