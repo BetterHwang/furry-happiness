@@ -17,6 +17,7 @@ target 'frame' do
 #    pod 'SwiftQRCode'
     
     pod "SDWebImage"
+    pod "MJRefresh"
     
     #播放器控制界面
 #    pod 'ZFPlayer/ControlView'

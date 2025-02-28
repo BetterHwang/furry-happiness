@@ -64,6 +64,7 @@ let safeSapceBottom = isPhoneX ? CGFloat(15.0):0.0
 //底部栏高度
 let bottomForHeight = isPhoneX ? CGFloat(65) : CGFloat(50)
 
+
 class AppConstants {
-    
+    static let PAGE_SIZE = 10
 }

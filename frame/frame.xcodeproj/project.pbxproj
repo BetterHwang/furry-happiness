@@ -12,6 +12,10 @@
 		0AEBDA022D7175FF00268C7B /* ApplePayHander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA012D7175FF00268C7B /* ApplePayHander.swift */; };
 		0AEBDA052D7178B800268C7B /* WebPageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA042D7178B800268C7B /* WebPageHandler.swift */; };
 		0AEBDA082D7178E100268C7B /* AppleLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA072D7178E100268C7B /* AppleLoginHandler.swift */; };
+		0AEBDA0A2D718AFD00268C7B /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA092D718AFD00268C7B /* BaseWebViewController.swift */; };
+		0AEBDA0C2D718B8B00268C7B /* LineProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA0B2D718B8B00268C7B /* LineProgressView.swift */; };
+		0AEBDA0E2D7195F700268C7B /* BaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA0D2D7195F700268C7B /* BaseNavigationView.swift */; };
+		0AEBDA102D71985300268C7B /* BaseModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA0F2D71985300268C7B /* BaseModelTableViewController.swift */; };
 		1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD02645162C001B96D7 /* HBMultiTabController.swift */; };
 		1835FBD7264516AC001B96D7 /* HBMultiTabChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD6264516AC001B96D7 /* HBMultiTabChildController.swift */; };
 		1835FBDC264519FD001B96D7 /* HBCommonTabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBDB264519FD001B96D7 /* HBCommonTabScrollView.swift */; };
@@ -114,6 +118,10 @@
 		0AEBDA012D7175FF00268C7B /* ApplePayHander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHander.swift; sourceTree = "<group>"; };
 		0AEBDA042D7178B800268C7B /* WebPageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageHandler.swift; sourceTree = "<group>"; };
 		0AEBDA072D7178E100268C7B /* AppleLoginHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginHandler.swift; sourceTree = "<group>"; };
+		0AEBDA092D718AFD00268C7B /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
+		0AEBDA0B2D718B8B00268C7B /* LineProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineProgressView.swift; sourceTree = "<group>"; };
+		0AEBDA0D2D7195F700268C7B /* BaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationView.swift; sourceTree = "<group>"; };
+		0AEBDA0F2D71985300268C7B /* BaseModelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelTableViewController.swift; sourceTree = "<group>"; };
 		1103F3046AAB3D002A157274 /* libPods-frame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-frame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1490EA1C2F22499545001CA8 /* Pods-frame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frame.debug.xcconfig"; path = "Target Support Files/Pods-frame/Pods-frame.debug.xcconfig"; sourceTree = "<group>"; };
 		1835FBD02645162C001B96D7 /* HBMultiTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabController.swift; sourceTree = "<group>"; };
@@ -323,6 +331,8 @@
 			isa = PBXGroup;
 			children = (
 				0AA2370A2D714EC30052A6C3 /* BaseModelTableCell.swift */,
+				0AEBDA0B2D718B8B00268C7B /* LineProgressView.swift */,
+				0AEBDA0D2D7195F700268C7B /* BaseNavigationView.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -351,6 +361,8 @@
 				1899B8122654A0BF004F1CD3 /* BaseViewController.swift */,
 				1899B8142654A0D3004F1CD3 /* BaseNavigationController.swift */,
 				1899B8162654A0F3004F1CD3 /* BaseTabController.swift */,
+				0AEBDA092D718AFD00268C7B /* BaseWebViewController.swift */,
+				0AEBDA0F2D71985300268C7B /* BaseModelTableViewController.swift */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -716,6 +728,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit_Privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.bundle",
@@ -725,6 +738,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Alamofire.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CryptoSwift.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDWebImage.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SnapKit_Privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwiftyJSON.bundle",
@@ -776,10 +790,13 @@
 				7998F6371D3C9172007F6A01 /* ExtensionBool.swift in Sources */,
 				184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */,
 				1899B81A2654AD21004F1CD3 /* BaseViewModel.swift in Sources */,
+				0AEBDA0E2D7195F700268C7B /* BaseNavigationView.swift in Sources */,
 				7998F6391D3C938D007F6A01 /* HPLabel.swift in Sources */,
 				187978E6264BE5C000437E24 /* HPSegment.swift in Sources */,
 				7982F39A1D6D804F00313038 /* HorizontalThreeGradientIndicator.swift in Sources */,
+				0AEBDA0A2D718AFD00268C7B /* BaseWebViewController.swift in Sources */,
 				7998F6311D3C90FF007F6A01 /* ExtensionInt.swift in Sources */,
+				0AEBDA0C2D718B8B00268C7B /* LineProgressView.swift in Sources */,
 				7998F63B1D3CAF9F007F6A01 /* HPTextViewWithLimitedLength.swift in Sources */,
 				79DB864E1D5D9B1700DFB4EC /* MCEntity.swift in Sources */,
 				1899B8112654A0A8004F1CD3 /* BaseTableController.swift in Sources */,
@@ -809,6 +826,7 @@
 				1899B8172654A0F3004F1CD3 /* BaseTabController.swift in Sources */,
 				1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */,
 				1835FBE526453245001B96D7 /* HBMultiTabView.swift in Sources */,
+				0AEBDA102D71985300268C7B /* BaseModelTableViewController.swift in Sources */,
 				184CF670263A9EFF0006D102 /* BaseModel.swift in Sources */,
 				1835FBE926453326001B96D7 /* HBMultiTabViewConfig.swift in Sources */,
 				79061CD21CF44297000BA6D7 /* HPToolLocation.swift in Sources */,

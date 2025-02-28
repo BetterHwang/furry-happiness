@@ -99,6 +99,7 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.bundle"
+  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit_Privacy.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.bundle"
@@ -107,6 +108,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.bundle"
+  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit_Privacy.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.bundle"

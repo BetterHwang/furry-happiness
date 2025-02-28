@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class BaseModel: Mappable {
+class BaseModel: NSObject, Mappable {
     required init?(map: Map) {
         
     }
