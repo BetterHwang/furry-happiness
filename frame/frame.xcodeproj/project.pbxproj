@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA2370B2D714EC30052A6C3 /* BaseModelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2370A2D714EC30052A6C3 /* BaseModelTableCell.swift */; };
+		0AA2370F2D71734F0052A6C3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA2370E2D71734F0052A6C3 /* CoreAudio.framework */; };
+		0AEBDA022D7175FF00268C7B /* ApplePayHander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA012D7175FF00268C7B /* ApplePayHander.swift */; };
+		0AEBDA052D7178B800268C7B /* WebPageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA042D7178B800268C7B /* WebPageHandler.swift */; };
+		0AEBDA082D7178E100268C7B /* AppleLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA072D7178E100268C7B /* AppleLoginHandler.swift */; };
 		1835FBD12645162C001B96D7 /* HBMultiTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD02645162C001B96D7 /* HBMultiTabController.swift */; };
 		1835FBD7264516AC001B96D7 /* HBMultiTabChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBD6264516AC001B96D7 /* HBMultiTabChildController.swift */; };
 		1835FBDC264519FD001B96D7 /* HBCommonTabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBDB264519FD001B96D7 /* HBCommonTabScrollView.swift */; };
 		1835FBE026451B6E001B96D7 /* HBCommonTabItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBDF26451B6E001B96D7 /* HBCommonTabItemCell.swift */; };
 		1835FBE526453245001B96D7 /* HBMultiTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBE426453245001B96D7 /* HBMultiTabView.swift */; };
 		1835FBE926453326001B96D7 /* HBMultiTabViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835FBE826453326001B96D7 /* HBMultiTabViewConfig.swift */; };
-		184CF618263A81D40006D102 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF616263A81C30006D102 /* libcrypto.a */; };
-		184CF61B263A81D60006D102 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF617263A81C30006D102 /* libssl.a */; };
-		184CF621263A83080006D102 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF620263A83080006D102 /* libc++.tbd */; };
 		184CF62D263A95000006D102 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF62C263A95000006D102 /* libz.tbd */; };
 		184CF631263A950E0006D102 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF630263A950E0006D102 /* Accelerate.framework */; };
 		184CF647263A97510006D102 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184CF646263A97510006D102 /* CoreServices.framework */; };
@@ -25,7 +27,6 @@
 		184F1326263B94F2000E8C2D /* HBProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1325263B94F2000E8C2D /* HBProgressView.swift */; };
 		184F1350263BEA45000E8C2D /* HBLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F134F263BEA45000E8C2D /* HBLoadingView.swift */; };
 		184F1354263BED22000E8C2D /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1353263BED22000E8C2D /* BaseEntity.swift */; };
-		187978DB264BB1C400437E24 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187978DA264BB1C400437E24 /* BaseTableCell.swift */; };
 		187978E6264BE5C000437E24 /* HPSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187978E5264BE5C000437E24 /* HPSegment.swift */; };
 		187E442B2657AE3B000CFDF9 /* PHAsset+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E442A2657AE3B000CFDF9 /* PHAsset+ext.swift */; };
 		1894F5C5264399B100A68C37 /* YYAnimatedImageView+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894F5C4264399B100A68C37 /* YYAnimatedImageView+ext.m */; };
@@ -37,11 +38,7 @@
 		1899B81A2654AD21004F1CD3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B8192654AD21004F1CD3 /* BaseViewModel.swift */; };
 		18D5982126663F300083C9E4 /* HPPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5982026663F300083C9E4 /* HPPlayerViewController.swift */; };
 		18EB0D37263A6E76003C04BE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */; };
-		7613DD9125A039F1C419461A /* Pods_frame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD804E60DBDFCD0286E442AB /* Pods_frame.framework */; };
 		79061CD21CF44297000BA6D7 /* HPToolLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79061CD11CF44297000BA6D7 /* HPToolLocation.swift */; };
-		792CDDF01CF699D90045F103 /* libGrowing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 792CDDEF1CF699D90045F103 /* libGrowing.a */; };
-		792CDDF21CF69BD50045F103 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 792CDDF11CF69BD50045F103 /* libicucore.tbd */; };
-		792CDDF41CF69C8B0045F103 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792CDDF31CF69C8B0045F103 /* Foundation.framework */; };
 		7931D95F1D46F02A00D6CAAA /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7931D95E1D46F02A00D6CAAA /* WebView.storyboard */; };
 		7931D9621D46F0C200D6CAAA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7931D9611D46F0C200D6CAAA /* WebViewController.swift */; };
 		79729E701CCE17220025C7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79729E6F1CCE17220025C7FA /* AppDelegate.swift */; };
@@ -76,7 +73,7 @@
 		79B154A11D016FC600949E6A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B154A01D016FC600949E6A /* Reachability.m */; };
 		79DB864E1D5D9B1700DFB4EC /* MCEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB864D1D5D9B1700DFB4EC /* MCEntity.swift */; };
 		79DB86501D5DA13300DFB4EC /* EncryptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DB864F1D5DA13300DFB4EC /* EncryptUtils.swift */; };
-		79E931F51CFD37A600C01DF9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 79E931F41CFD37A600C01DF9 /* README.md */; };
+		E8259F482E0361ECEB0A3443 /* libPods-frame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1103F3046AAB3D002A157274 /* libPods-frame.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +108,13 @@
 
 /* Begin PBXFileReference section */
 		072EF54347ABE94D970839BB /* Pods-frame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frame.release.xcconfig"; path = "Target Support Files/Pods-frame/Pods-frame.release.xcconfig"; sourceTree = "<group>"; };
+		0AA2370A2D714EC30052A6C3 /* BaseModelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelTableCell.swift; sourceTree = "<group>"; };
+		0AA2370C2D7171BB0052A6C3 /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = SDKROOT; };
+		0AA2370E2D71734F0052A6C3 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		0AEBDA012D7175FF00268C7B /* ApplePayHander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHander.swift; sourceTree = "<group>"; };
+		0AEBDA042D7178B800268C7B /* WebPageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageHandler.swift; sourceTree = "<group>"; };
+		0AEBDA072D7178E100268C7B /* AppleLoginHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginHandler.swift; sourceTree = "<group>"; };
+		1103F3046AAB3D002A157274 /* libPods-frame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-frame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1490EA1C2F22499545001CA8 /* Pods-frame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frame.debug.xcconfig"; path = "Target Support Files/Pods-frame/Pods-frame.debug.xcconfig"; sourceTree = "<group>"; };
 		1835FBD02645162C001B96D7 /* HBMultiTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabController.swift; sourceTree = "<group>"; };
 		1835FBD6264516AC001B96D7 /* HBMultiTabChildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabChildController.swift; sourceTree = "<group>"; };
@@ -118,9 +122,6 @@
 		1835FBDF26451B6E001B96D7 /* HBCommonTabItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBCommonTabItemCell.swift; sourceTree = "<group>"; };
 		1835FBE426453245001B96D7 /* HBMultiTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabView.swift; sourceTree = "<group>"; };
 		1835FBE826453326001B96D7 /* HBMultiTabViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMultiTabViewConfig.swift; sourceTree = "<group>"; };
-		184CF616263A81C30006D102 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		184CF617263A81C30006D102 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		184CF620263A83080006D102 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		184CF62C263A95000006D102 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		184CF630263A950E0006D102 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		184CF646263A97510006D102 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -130,7 +131,6 @@
 		184F1325263B94F2000E8C2D /* HBProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBProgressView.swift; sourceTree = "<group>"; };
 		184F134F263BEA45000E8C2D /* HBLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBLoadingView.swift; sourceTree = "<group>"; };
 		184F1353263BED22000E8C2D /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
-		187978DA264BB1C400437E24 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		187978E5264BE5C000437E24 /* HPSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPSegment.swift; sourceTree = "<group>"; };
 		187E442A2657AE3B000CFDF9 /* PHAsset+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+ext.swift"; sourceTree = "<group>"; };
 		1894F5C3264399B100A68C37 /* YYAnimatedImageView+ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYAnimatedImageView+ext.h"; sourceTree = "<group>"; };
@@ -144,10 +144,6 @@
 		18D5982026663F300083C9E4 /* HPPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPPlayerViewController.swift; sourceTree = "<group>"; };
 		18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		79061CD11CF44297000BA6D7 /* HPToolLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPToolLocation.swift; sourceTree = "<group>"; };
-		792CDDEE1CF699D90045F103 /* Growing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Growing.h; sourceTree = "<group>"; };
-		792CDDEF1CF699D90045F103 /* libGrowing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGrowing.a; sourceTree = "<group>"; };
-		792CDDF11CF69BD50045F103 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		792CDDF31CF69C8B0045F103 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7931D95E1D46F02A00D6CAAA /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		7931D9611D46F0C200D6CAAA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7931D9641D47473E00D6CAAA /* frame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = frame.entitlements; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 		79B154A01D016FC600949E6A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		79DB864D1D5D9B1700DFB4EC /* MCEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCEntity.swift; sourceTree = "<group>"; };
 		79DB864F1D5DA13300DFB4EC /* EncryptUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptUtils.swift; sourceTree = "<group>"; };
-		79E931F41CFD37A600C01DF9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		AD804E60DBDFCD0286E442AB /* Pods_frame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,17 +194,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA2370F2D71734F0052A6C3 /* CoreAudio.framework in Frameworks */,
 				184CF631263A950E0006D102 /* Accelerate.framework in Frameworks */,
 				184CF62D263A95000006D102 /* libz.tbd in Frameworks */,
-				184CF621263A83080006D102 /* libc++.tbd in Frameworks */,
 				18EB0D37263A6E76003C04BE /* libsqlite3.0.tbd in Frameworks */,
-				792CDDF41CF69C8B0045F103 /* Foundation.framework in Frameworks */,
-				792CDDF21CF69BD50045F103 /* libicucore.tbd in Frameworks */,
 				184CF647263A97510006D102 /* CoreServices.framework in Frameworks */,
-				792CDDF01CF699D90045F103 /* libGrowing.a in Frameworks */,
-				184CF618263A81D40006D102 /* libcrypto.a in Frameworks */,
-				184CF61B263A81D60006D102 /* libssl.a in Frameworks */,
-				7613DD9125A039F1C419461A /* Pods_frame.framework in Frameworks */,
+				E8259F482E0361ECEB0A3443 /* libPods-frame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,14 +223,39 @@
 		061459DC744D604FB640A3D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AA2370E2D71734F0052A6C3 /* CoreAudio.framework */,
+				0AA2370C2D7171BB0052A6C3 /* CoreAudioTypes.framework */,
 				184CF646263A97510006D102 /* CoreServices.framework */,
 				184CF630263A950E0006D102 /* Accelerate.framework */,
 				184CF62C263A95000006D102 /* libz.tbd */,
-				184CF620263A83080006D102 /* libc++.tbd */,
 				18EB0D36263A6E76003C04BE /* libsqlite3.0.tbd */,
-				AD804E60DBDFCD0286E442AB /* Pods_frame.framework */,
+				1103F3046AAB3D002A157274 /* libPods-frame.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AEBDA002D7175DA00268C7B /* ApplePay */ = {
+			isa = PBXGroup;
+			children = (
+				0AEBDA012D7175FF00268C7B /* ApplePayHander.swift */,
+			);
+			path = ApplePay;
+			sourceTree = "<group>";
+		};
+		0AEBDA032D71789C00268C7B /* WebPage */ = {
+			isa = PBXGroup;
+			children = (
+				0AEBDA042D7178B800268C7B /* WebPageHandler.swift */,
+			);
+			path = WebPage;
+			sourceTree = "<group>";
+		};
+		0AEBDA062D7178C700268C7B /* AppleLogin */ = {
+			isa = PBXGroup;
+			children = (
+				0AEBDA072D7178E100268C7B /* AppleLoginHandler.swift */,
+			);
+			path = AppleLogin;
 			sourceTree = "<group>";
 		};
 		1835FBCF264515FB001B96D7 /* MultiTabController */ = {
@@ -284,8 +298,9 @@
 		184CF615263A81C30006D102 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
-				184CF616263A81C30006D102 /* libcrypto.a */,
-				184CF617263A81C30006D102 /* libssl.a */,
+				0AEBDA062D7178C700268C7B /* AppleLogin */,
+				0AEBDA032D71789C00268C7B /* WebPage */,
+				0AEBDA002D7175DA00268C7B /* ApplePay */,
 			);
 			path = ThirdPart;
 			sourceTree = "<group>";
@@ -307,7 +322,7 @@
 		187978D9264BB19400437E24 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
-				187978DA264BB1C400437E24 /* BaseTableCell.swift */,
+				0AA2370A2D714EC30052A6C3 /* BaseModelTableCell.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -357,18 +372,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		792CDDED1CF699D90045F103 /* GrowingIO */ = {
-			isa = PBXGroup;
-			children = (
-				79E931F41CFD37A600C01DF9 /* README.md */,
-				792CDDF31CF69C8B0045F103 /* Foundation.framework */,
-				792CDDF11CF69BD50045F103 /* libicucore.tbd */,
-				792CDDEE1CF699D90045F103 /* Growing.h */,
-				792CDDEF1CF699D90045F103 /* libGrowing.a */,
-			);
-			path = GrowingIO;
-			sourceTree = "<group>";
-		};
 		7931D95D1D46F01C00D6CAAA /* UIStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,7 +400,6 @@
 				79DB864C1D5D983900DFB4EC /* Mixcom */,
 				79B1549C1D016E2200949E6A /* Network */,
 				79B154991D0167A400949E6A /* DeviceInfo */,
-				792CDDED1CF699D90045F103 /* GrowingIO */,
 				79729E9D1CCE18B90025C7FA /* Location */,
 				7998F6271D3C907E007F6A01 /* TypeExtensions */,
 				7998F6241D3C8774007F6A01 /* UIExtensions */,
@@ -572,7 +574,6 @@
 				79729E6A1CCE17220025C7FA /* Resources */,
 				79729E691CCE17220025C7FA /* Frameworks */,
 				793AD9B91E309A7200649814 /* Embed Frameworks */,
-				76E35E63DACA4CAB4BF62C43 /* [CP] Embed Pods Frameworks */,
 				586F15D133BF7D430D158393 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -713,65 +714,25 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-resources.sh",
-				"${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.bundle",
+				"${PODS_ROOT}/YBImageBrowser/YBImageBrowser/YBImageBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Alamofire.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CryptoSwift.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDWebImage.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SnapKit_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwiftyJSON.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YBImageBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76E35E63DACA4CAB4BF62C43 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ISVImageScrollView/ISVImageScrollView.framework",
-				"${BUILT_PRODUCTS_DIR}/MMLayout/MMLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftEventBus/SwiftEventBus.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/TXIMSDK_TUIKit_iOS/TXIMSDK_TUIKit_iOS.framework",
-				"${PODS_ROOT}/TXIMSDK_iOS/ImSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
-				"${BUILT_PRODUCTS_DIR}/YBImageBrowser/YBImageBrowser.framework",
-				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISVImageScrollView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEventBus.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TXIMSDK_TUIKit_iOS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBImageBrowser.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-frame/Pods-frame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6FA5213231D66C1BBE5650C /* [CP] Check Pods Manifest.lock */ = {
@@ -808,6 +769,7 @@
 				1894F5C5264399B100A68C37 /* YYAnimatedImageView+ext.m in Sources */,
 				798782921DF10C3F005C76A8 /* ActivityViewController.swift in Sources */,
 				184CF674263AA6B90006D102 /* AppConstants.swift in Sources */,
+				0AEBDA052D7178B800268C7B /* WebPageHandler.swift in Sources */,
 				1894F5CC2643BBDB00A68C37 /* Util_Number.swift in Sources */,
 				1899B8152654A0D4004F1CD3 /* BaseNavigationController.swift in Sources */,
 				79B1549B1D0167BA00949E6A /* HPDeviceInfo.swift in Sources */,
@@ -824,11 +786,13 @@
 				798D85DB1D659EC700EF8B21 /* HPPageViewController.swift in Sources */,
 				7998F6331D3C914C007F6A01 /* ExtensionFloat.swift in Sources */,
 				7982F3951D6D740C00313038 /* ExtensionUIViewController.swift in Sources */,
+				0AEBDA022D7175FF00268C7B /* ApplePayHander.swift in Sources */,
 				7982F39E1D6DABDE00313038 /* MapCenterAnnotationView.swift in Sources */,
 				1835FBDC264519FD001B96D7 /* HBCommonTabScrollView.swift in Sources */,
 				7998F62F1D3C90F0007F6A01 /* ExtensionString.swift in Sources */,
 				1835FBD7264516AC001B96D7 /* HBMultiTabChildController.swift in Sources */,
 				1835FBE026451B6E001B96D7 /* HBCommonTabItemCell.swift in Sources */,
+				0AA2370B2D714EC30052A6C3 /* BaseModelTableCell.swift in Sources */,
 				79DB86501D5DA13300DFB4EC /* EncryptUtils.swift in Sources */,
 				18D5982126663F300083C9E4 /* HPPlayerViewController.swift in Sources */,
 				79B1549E1D016E3A00949E6A /* HPNetworkManager.swift in Sources */,
@@ -836,9 +800,8 @@
 				7998F6261D3C87C2007F6A01 /* HPTextView.swift in Sources */,
 				7982F3AA1D70149E00313038 /* HPWebImageManager.swift in Sources */,
 				798782961DF10FA2005C76A8 /* HPGravityModalTransition.swift in Sources */,
-				187978DB264BB1C400437E24 /* BaseTableCell.swift in Sources */,
 				79729E9F1CCE196A0025C7FA /* HPLocationManager.swift in Sources */,
-				79E931F51CFD37A600C01DF9 /* README.md in Sources */,
+				0AEBDA082D7178E100268C7B /* AppleLoginHandler.swift in Sources */,
 				7931D9621D46F0C200D6CAAA /* WebViewController.swift in Sources */,
 				7982F3AD1D70439C00313038 /* BannerView.swift in Sources */,
 				7982F3971D6D742B00313038 /* ExtensionUIView.swift in Sources */,
@@ -1028,14 +991,19 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = frame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GrowingIO",
 					"$(PROJECT_DIR)/ThirdPart",
 				);
-				OTHER_LDFLAGS = "-Objc";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ld_classic",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iartschool.scene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1057,14 +1025,19 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = frame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GrowingIO",
 					"$(PROJECT_DIR)/ThirdPart",
 				);
-				OTHER_LDFLAGS = "-Objc";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ld_classic",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iartschool.scene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

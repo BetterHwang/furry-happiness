@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SnapKit
 
 class HBCommonTabItemCell: UICollectionViewCell {
     
@@ -21,8 +22,8 @@ class HBCommonTabItemCell: UICollectionViewCell {
     
     func configView(view: UIView) {
         self.contentView.addSubview(view)
-        view.mas_makeConstraints { (make) in
-            make?.edges.equalTo()(self.contentView)
+        view.snp.makeConstraints() { (make) in
+            make.edges.equalToSuperview()
         }
     }
 }

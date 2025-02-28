@@ -1,25 +1,27 @@
-platform :ios, '9.0'
-use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '11.0'
+inhibit_all_warnings!
 
 target 'frame' do
     pod 'ObjectMapper'
     pod 'SwiftyJSON'
-    pod 'Masonry'
     pod 'Alamofire'
     pod 'CryptoSwift'
     pod 'SQLite.swift'
     pod 'SwiftEventBus'
 #    pod 'BaiduMapKit', '~>6.2.0'
     pod 'YBImageBrowser'
-    pod 'Masonry'
-    pod 'SwiftQRCode'
+    pod 'SnapKit'
+#    pod 'Masonry'
+#    pod 'SwiftQRCode'
     
     pod "SDWebImage"
     
     #播放器控制界面
-    pod 'ZFPlayer/ControlView'
+#    pod 'ZFPlayer/ControlView'
     
     #腾讯直播
-    pod "TXLiteAVSDK_TRTC"
-    pod 'TXIMSDK_TUIKit_iOS'#, '~> 5.1.60'
+#    pod "TXLiteAVSDK_TRTC"
+#    pod 'TXIMSDK_TUIKit_iOS'#, '~> 5.1.60'
 end

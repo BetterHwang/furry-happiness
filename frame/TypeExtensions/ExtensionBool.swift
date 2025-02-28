@@ -12,7 +12,6 @@ import Foundation
 extension Bool{
     
     func stringValue() -> String {
-        
         if self {
             return "true"
         }else{

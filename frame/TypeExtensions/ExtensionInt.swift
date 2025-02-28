@@ -20,3 +20,9 @@ extension UInt {
         return String(format: format, self)
     }
 }
+
+extension Int64 {
+    func toString(_ format: String = "%lld") -> String {
+        return String(format: format, self)
+    }
+}

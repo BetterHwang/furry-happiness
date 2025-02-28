@@ -22,8 +22,8 @@ class HPPlayerViewController: BaseViewController {
         
         self.addChild(player)
         self.view.addSubview(player.view)
-        player.view.mas_makeConstraints { make in
-            make?.edges.equalTo()(player.view)
-        }
+//        player.view.snp.make { make in
+//            make?.edges.equalTo()(player.view)
+//        }
     }
 }

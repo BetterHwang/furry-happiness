@@ -94,16 +94,16 @@ class EncryptUtils {
     * MD5
     * original data -> md5 data
     */
-    class func md5(_ input: String) -> String? {
+    class func md5(_ input: String) -> String {
         let strTemp = input //+ "+\(Key)"
-        return strTemp.md5()
+        return input.md5()
     }
 
     /*
     * Sign
     * 特殊签名字符串
     */
-    class func sign(_ dict: [String: String]) -> String? {
+    class func sign(_ dict: [String: String]) -> String {
 
         var strSign : String = ""
 

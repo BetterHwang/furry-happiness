@@ -74,6 +74,16 @@ extension String {
         return self
     }
     
+//    func getHeight(limitedWidth: CGFloat, font: UIFont, lineHeight: CGFloat) -> CGFloat {
+//        
+//    }
+//    
+    func getHeight(limitedWidth: CGFloat, font: UIFont, lineSpace: CGFloat) -> CGFloat {
+        let parStyle: NSMutableParagraphStyle = .init()
+        parStyle.lineSpacing = lineSpace
+        return getHeight(limitedWidth: limitedWidth, attributes: [.font : font, .paragraphStyle: parStyle])
+    }
+    
     func getHeight(limitedWidth: CGFloat, attributes: [NSAttributedString.Key : Any]) -> CGFloat {
         let limitedSize = CGSize(width: limitedWidth, height: CGFloat.greatestFiniteMagnitude)
         let size = self.boundingRect(with: limitedSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)

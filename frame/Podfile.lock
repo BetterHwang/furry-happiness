@@ -1,30 +1,15 @@
 PODS:
-  - Alamofire (4.9.1)
-  - CryptoSwift (1.4.0)
-  - ISVImageScrollView (0.3.0)
-  - Masonry (1.1.0)
-  - MMLayout (0.2.0)
+  - Alamofire (5.10.2)
+  - CryptoSwift (1.8.4)
   - ObjectMapper (4.2.0)
-  - ReactiveObjC (3.1.1)
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
-  - SQLite.swift (0.12.2):
-    - SQLite.swift/standard (= 0.12.2)
-  - SQLite.swift/standard (0.12.2)
+  - SDWebImage (5.21.0):
+    - SDWebImage/Core (= 5.21.0)
+  - SDWebImage/Core (5.21.0)
+  - SnapKit (5.7.1)
+  - SQLite.swift (0.15.3):
+    - SQLite.swift/standard (= 0.15.3)
   - SwiftEventBus (5.0.0)
-  - SwiftQRCode (3.0.2)
-  - SwiftyJSON (5.0.1)
-  - Toast (4.0.0)
-  - TXIMSDK_iOS (5.1.62)
-  - TXIMSDK_TUIKit_iOS (4.6.58):
-    - ISVImageScrollView
-    - MMLayout (= 0.2.0)
-    - ReactiveObjC
-    - SDWebImage
-    - Toast
-    - TXIMSDK_iOS
-  - TXLiteAVSDK_TRTC (8.7.10102)
+  - SwiftyJSON (5.0.2)
   - YBImageBrowser (3.0.9):
     - YBImageBrowser/Core (= 3.0.9)
   - YBImageBrowser/Core (3.0.9):
@@ -33,68 +18,43 @@ PODS:
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
   - YYImage/Core (1.0.4)
-  - ZFPlayer/ControlView (4.0.1):
-    - ZFPlayer/Core
-  - ZFPlayer/Core (4.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - CryptoSwift
-  - Masonry
   - ObjectMapper
   - SDWebImage
+  - SnapKit
   - SQLite.swift
   - SwiftEventBus
-  - SwiftQRCode
   - SwiftyJSON
-  - TXIMSDK_TUIKit_iOS
-  - TXLiteAVSDK_TRTC
   - YBImageBrowser
-  - ZFPlayer/ControlView
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - CryptoSwift
-    - ISVImageScrollView
-    - Masonry
-    - MMLayout
     - ObjectMapper
-    - ReactiveObjC
     - SDWebImage
+    - SnapKit
     - SQLite.swift
     - SwiftEventBus
-    - SwiftQRCode
     - SwiftyJSON
-    - Toast
-    - TXIMSDK_iOS
-    - TXIMSDK_TUIKit_iOS
-    - TXLiteAVSDK_TRTC
     - YBImageBrowser
     - YYImage
-    - ZFPlayer
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
-  ISVImageScrollView: 2c89840496647af985bfc0e09b346b9aa733ecec
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MMLayout: 3fb59d58eeb8656c64e61d550fb0088e10666c11
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
-  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SDWebImage: f84b0feeb08d2d11e6a9b843cb06d75ebf5b8868
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SQLite.swift: 8d054987f02728cc912b0eb5a9659650573a65a2
   SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
-  SwiftQRCode: 280589699d84195c2c573011aa52f2c015c31c34
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
-  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TXIMSDK_iOS: 4016cc84a61db57fc8ca024becf47ad229bbeef1
-  TXIMSDK_TUIKit_iOS: 07d410f70bd3601506d1b0f219174fc1eed76ef9
-  TXLiteAVSDK_TRTC: e78365f430926a1064e175fd8d97601559e7d3d1
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
   YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
-  ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 55d61894d82ef5101dc6ec7d5f40c43651ccdfc4
+PODFILE CHECKSUM: b4684f9bbd53dcff77b3561f5e6a5bf2db787eb3
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.16.2

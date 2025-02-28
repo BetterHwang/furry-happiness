@@ -97,10 +97,20 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit_Privacy.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.bundle"
+  install_resource "${PODS_ROOT}/YBImageBrowser/YBImageBrowser/YBImageBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit_Privacy.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.bundle"
+  install_resource "${PODS_ROOT}/YBImageBrowser/YBImageBrowser/YBImageBrowser.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

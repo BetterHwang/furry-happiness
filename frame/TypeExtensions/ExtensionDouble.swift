@@ -10,7 +10,7 @@ import Foundation
 
 //Double类型扩展
 extension Double {
-    func toString(_ format: String = "%lf") -> String {
+    func toString(_ format: String = "%llf") -> String {
         return String(format: format, self)
     }
 }

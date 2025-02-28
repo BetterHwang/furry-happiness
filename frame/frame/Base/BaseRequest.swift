@@ -19,8 +19,8 @@ protocol BaseRequestDelegate {
 
 class BaseRequest {
     class func config(timeout: TimeInterval) {
-        SessionManager.default.session.configuration.timeoutIntervalForRequest = timeout
-        SessionManager.default.adapter = BaseRequestAdapter()
+        Session.default.session.configuration.timeoutIntervalForRequest = timeout
+//        Session.default.adapter = BaseRequestAdapter()
 //        SessionManager.default.retrier = BaseRequestRetrier()
     }
     
@@ -35,7 +35,7 @@ class BaseRequest {
         loadingView: HBLoadingView? = nil
         /*, delegate: BaseRequestDelegate*/) -> Request {
         
-        let request = SessionManager.default.request(urlString, method: method, parameters: params, encoding: JSONEncoding.default, headers: nil)
+        let request = Session.default.request(urlString, method: method, parameters: params, encoding: JSONEncoding.default, headers: nil)
             .validate()
             .responseJSON { (dataResponse) in
                 switch (dataResponse.result) {
@@ -81,7 +81,11 @@ class BaseRequest {
 }
 
 // 添加公共参数 / 请求重定向(重新创建URLRequest返回)
-class BaseRequestAdapter: RequestAdapter {
+final class BaseRequestAdapter: RequestAdapter {
+    func adapt(_ urlRequest: URLRequest, for session: Alamofire.Session, completion: @escaping @Sendable (Result<URLRequest, any Error>) -> Void) {
+        
+    }
+    
     fileprivate static var header_default: HTTPHeaders = [
         "Authorization": "",
         "Content-Type": "application/json",
@@ -106,16 +110,20 @@ class BaseRequestAdapter: RequestAdapter {
 }
 
 // 重新请求
-class BaseRequestRetrier: RequestRetrier {
+final class BaseRequestRetrier: RequestRetrier {
+    func retry(_ request: Alamofire.Request, for session: Alamofire.Session, dueTo error: any Error, completion: @escaping @Sendable (Alamofire.RetryResult) -> Void) {
+        
+    }
+    
     var repeatCount: Int = 0
     let maxCount: Int = 3
     let timeDelay: TimeInterval = 2
-    func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
-        if repeatCount < maxCount {
-            completion(true, timeDelay)
-            repeatCount += 1
-        }else {
-            completion(false, timeDelay)
-        }
-    }
+//    func should(_ manager: Session, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
+//        if repeatCount < maxCount {
+//            completion(true, timeDelay)
+//            repeatCount += 1
+//        }else {
+//            completion(false, timeDelay)
+//        }
+//    }
 }

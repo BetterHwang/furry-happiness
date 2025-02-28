@@ -53,17 +53,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-        if url.scheme == "growing.a1474e274f7d60ae"  {
-            return Growing.handle(url)
-        }
+//        if url.scheme == "growing.a1474e274f7d60ae"  {
+//            return Growing.handle(url)
+//        }
         
         return false
     }
 
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        if url.scheme == "growing.a1474e274f7d60ae"  {
-            return Growing.handle(url)
-        }
+//        if url.scheme == "growing.a1474e274f7d60ae"  {
+//            return Growing.handle(url)
+//        }
         
         return false
     }
