@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0AA2370B2D714EC30052A6C3 /* BaseModelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2370A2D714EC30052A6C3 /* BaseModelTableCell.swift */; };
 		0AA2370F2D71734F0052A6C3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA2370E2D71734F0052A6C3 /* CoreAudio.framework */; };
+		0AA3D0932D754AF100A5E88B /* AppleIAPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3D0922D754AF100A5E88B /* AppleIAPHandler.swift */; };
+		0AA3D0952D754AFF00A5E88B /* AppleIAPHandler15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3D0942D754AFF00A5E88B /* AppleIAPHandler15.swift */; };
 		0AEBDA022D7175FF00268C7B /* ApplePayHander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA012D7175FF00268C7B /* ApplePayHander.swift */; };
 		0AEBDA052D7178B800268C7B /* WebPageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA042D7178B800268C7B /* WebPageHandler.swift */; };
 		0AEBDA082D7178E100268C7B /* AppleLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEBDA072D7178E100268C7B /* AppleLoginHandler.swift */; };
@@ -116,6 +118,8 @@
 		0AA2370A2D714EC30052A6C3 /* BaseModelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelTableCell.swift; sourceTree = "<group>"; };
 		0AA2370C2D7171BB0052A6C3 /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = SDKROOT; };
 		0AA2370E2D71734F0052A6C3 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		0AA3D0922D754AF100A5E88B /* AppleIAPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIAPHandler.swift; sourceTree = "<group>"; };
+		0AA3D0942D754AFF00A5E88B /* AppleIAPHandler15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIAPHandler15.swift; sourceTree = "<group>"; };
 		0AEBDA012D7175FF00268C7B /* ApplePayHander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHander.swift; sourceTree = "<group>"; };
 		0AEBDA042D7178B800268C7B /* WebPageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageHandler.swift; sourceTree = "<group>"; };
 		0AEBDA072D7178E100268C7B /* AppleLoginHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginHandler.swift; sourceTree = "<group>"; };
@@ -244,6 +248,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0AA3D0912D754ACF00A5E88B /* AppleIAP */ = {
+			isa = PBXGroup;
+			children = (
+				0AA3D0922D754AF100A5E88B /* AppleIAPHandler.swift */,
+				0AA3D0942D754AFF00A5E88B /* AppleIAPHandler15.swift */,
+			);
+			path = AppleIAP;
+			sourceTree = "<group>";
+		};
 		0AEBDA002D7175DA00268C7B /* ApplePay */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +321,7 @@
 		184CF615263A81C30006D102 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				0AA3D0912D754ACF00A5E88B /* AppleIAP */,
 				0AEBDA062D7178C700268C7B /* AppleLogin */,
 				0AEBDA032D71789C00268C7B /* WebPage */,
 				0AEBDA002D7175DA00268C7B /* ApplePay */,
@@ -799,6 +813,8 @@
 				7982F39A1D6D804F00313038 /* HorizontalThreeGradientIndicator.swift in Sources */,
 				0AEBDA0A2D718AFD00268C7B /* BaseWebViewController.swift in Sources */,
 				7998F6311D3C90FF007F6A01 /* ExtensionInt.swift in Sources */,
+				0AA3D0952D754AFF00A5E88B /* AppleIAPHandler15.swift in Sources */,
+				0AA3D0932D754AF100A5E88B /* AppleIAPHandler.swift in Sources */,
 				0AEBDA0C2D718B8B00268C7B /* LineProgressView.swift in Sources */,
 				7998F63B1D3CAF9F007F6A01 /* HPTextViewWithLimitedLength.swift in Sources */,
 				79DB864E1D5D9B1700DFB4EC /* MCEntity.swift in Sources */,

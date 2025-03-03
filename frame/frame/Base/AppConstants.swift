@@ -67,4 +67,6 @@ let bottomForHeight = isPhoneX ? CGFloat(65) : CGFloat(50)
 
 class AppConstants {
     static let PAGE_SIZE = 10
+    static let AES_KEY = "1111111111111111"
+    static let AES_IV = "1111111111111111"
 }
